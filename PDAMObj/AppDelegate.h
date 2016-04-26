@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IQKeyboardManager.h"
+#import "SingleLineTextField.h"
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

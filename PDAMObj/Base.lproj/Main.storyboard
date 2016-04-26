@@ -1,25 +1,117 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zyz-Wy-S4I">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--TagQ-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HBv-0r-XMg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Q6J-t2-k6T"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="KzW-Nh-NUH"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HBv-0r-XMg" secondAttribute="bottom" id="DJr-Eg-bj6"/>
+                            <constraint firstAttribute="trailing" secondItem="HBv-0r-XMg" secondAttribute="trailing" id="WN0-VV-3KZ"/>
+                            <constraint firstItem="HBv-0r-XMg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="iou-tL-ryp"/>
+                            <constraint firstItem="HBv-0r-XMg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yAC-E9-jKE"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="TagQ" id="l4w-ji-EBo">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="pWg-zN-kSZ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="act_add_tagihan:" destination="BYZ-38-t0r" id="46g-So-VSe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="btn_add" destination="pWg-zN-kSZ" id="etf-JD-IKW"/>
+                        <outlet property="tbl_data_user" destination="HBv-0r-XMg" id="tEf-2c-qZm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="886" y="440"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IeF-TW-2R4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zyz-Wy-S4I" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Y4R-q8-IBy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.89126098155975342" green="0.3545563817024231" blue="0.39968371391296387" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.98624199629999998" green="0.77968657019999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="84v-E1-yM4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="scv-J6-tGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="378" y="435"/>
+        </scene>
+        <!--DetailTagihan-->
+        <scene sceneID="xEz-96-oar">
+            <objects>
+                <viewController storyboardIdentifier="DetailTagihan" title="DetailTagihan" id="mev-Vk-QLE" customClass="DetailTagihan" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e69-7p-pBP"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kcl-br-Tnh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bGS-2H-zRi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etg-vt-Je4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="mev-Vk-QLE" id="hIC-um-fK2"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="etg-vt-Je4" secondAttribute="trailing" id="4jg-59-IbR"/>
+                            <constraint firstItem="etg-vt-Je4" firstAttribute="top" secondItem="bGS-2H-zRi" secondAttribute="top" id="8iI-CT-ix5"/>
+                            <constraint firstItem="etg-vt-Je4" firstAttribute="leading" secondItem="bGS-2H-zRi" secondAttribute="leading" id="91q-A3-Wwy"/>
+                            <constraint firstItem="Kcl-br-Tnh" firstAttribute="top" secondItem="etg-vt-Je4" secondAttribute="bottom" id="HLb-ZS-VG8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="DetailQ" id="Igd-J1-cMk"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="webView" destination="etg-vt-Je4" id="OcK-Mg-DX1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yS4-QH-GjU" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1281" y="440"/>
         </scene>
     </scenes>
 </document>

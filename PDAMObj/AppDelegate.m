@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ObjectiveRecord.h"
+#import "CoreDataManager.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +18,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [CoreDataManager sharedManager].modelName = @"SaveUser";
+    [CoreDataManager sharedManager].databaseName = @"SaveUser";
+    [[CoreDataManager sharedManager] useInMemoryStore];
+    [IQKeyboardManager sharedManager].enable = true;
+    [[SingleLineTextField appearance] setLineDisabledColor:[UIColor cyanColor]];
+    [[SingleLineTextField appearance] setLineNormalColor:[UIColor grayColor]];
+    [[SingleLineTextField appearance] setLineSelectedColor:[UIColor grayColor]];
+    [[SingleLineTextField appearance] setInputPlaceHolderColor:[UIColor grayColor]];
+    [[SingleLineTextField appearance] setInputFont:[UIFont boldSystemFontOfSize:15]];
+    [[SingleLineTextField appearance] setPlaceHolderFont:[UIFont boldSystemFontOfSize:13]];
     // Override point for customization after application launch.
     return YES;
 }
@@ -38,8 +51,10 @@
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+- (void)applicationWillTerminate:(UIApplication *)application
+{
+    // Saves changes in the application's managed object context before the application terminates.
+    [[CoreDataManager sharedManager] saveContext];
 }
 
 @end
