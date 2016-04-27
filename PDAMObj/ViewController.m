@@ -69,6 +69,8 @@
     [self WelcomeScreen];
 }
 
+//php -S 192.168.2.12:8080 -t public public/index.php
+
 -(void)WelcomeScreen {
     WelcomeScreen *popin = [[WelcomeScreen alloc] initWithNibName:@"WelcomeScreen" bundle:nil];
     

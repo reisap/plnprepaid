@@ -44,7 +44,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    [manager POST:@"http://0.0.0.0:8080/api/pdamku"
+    [manager POST:@"http://192.168.2.12:8080/api/pdamku"
        parameters:@{@"input1": input1, @"input2":input2}
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               NSString* encodedString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
@@ -54,6 +54,12 @@
               NSLog(@"%@", encodedString);
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               NSLog(@"Error: %@", error);
+              UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                              message:@"Network required !"
+                                                             delegate:nil
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles:nil];
+              [alert show];
           }];
 }
 
