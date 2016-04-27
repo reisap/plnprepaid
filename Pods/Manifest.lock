@@ -40,6 +40,7 @@ PODS:
   - MaryPopin (1.4.2)
   - ObjectiveSugar (1.1.0)
   - SingleLineInput (1.0.7)
+  - SVProgressHUD (2.0.3)
   - THCalendarDatePicker (1.2.7):
     - KNSemiModalViewController_hons82 (~> 0.4.4)
 
@@ -53,6 +54,7 @@ DEPENDENCIES:
   - MaryPopin
   - ObjectiveSugar
   - SingleLineInput
+  - SVProgressHUD
   - THCalendarDatePicker (~> 1.2.6)
 
 SPEC CHECKSUMS:
@@ -67,6 +69,7 @@ SPEC CHECKSUMS:
   MaryPopin: 24affc7fab9608dcad88279e32e774e5de5d54ac
   ObjectiveSugar: a6a25f23d657c19df0a0b972466d5b5ca9f5295c
   SingleLineInput: 4def171b91a2325d315bc8896f952b83f9941666
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   THCalendarDatePicker: a3c3bea65eaf0fdd7044ff5d4886056dc72164fd
 
 COCOAPODS: 0.37.2

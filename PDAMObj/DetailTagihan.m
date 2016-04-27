@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 #import "EGYWebViewController.h"
 #import "ObjectiveRecord.h"
+#import "SVProgressHUD.h"
 
 
 #define urlUtama "http://localhost"
@@ -41,6 +42,10 @@
 
 
 -(void)getDataUserTagihan : (NSString*)input1 : (NSString*)input2 {
+    
+    [SVProgressHUD show];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // time-consuming task
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
@@ -50,6 +55,7 @@
               NSString* encodedString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
               dataHTMLHasil = encodedString;
               [_webView loadHTMLString:dataHTMLHasil baseURL:nil];
+               [SVProgressHUD dismiss];
               
               NSLog(@"%@", encodedString);
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -61,6 +67,12 @@
                                                     otherButtonTitles:nil];
               [alert show];
           }];
+        
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
+    });
 }
 
 /*

@@ -126,6 +126,12 @@
 #define COCOAPODS_VERSION_MINOR_ObjectiveSugar 1
 #define COCOAPODS_VERSION_PATCH_ObjectiveSugar 0
 
+// SVProgressHUD
+#define COCOAPODS_POD_AVAILABLE_SVProgressHUD
+#define COCOAPODS_VERSION_MAJOR_SVProgressHUD 2
+#define COCOAPODS_VERSION_MINOR_SVProgressHUD 0
+#define COCOAPODS_VERSION_PATCH_SVProgressHUD 3
+
 // SingleLineInput
 #define COCOAPODS_POD_AVAILABLE_SingleLineInput
 #define COCOAPODS_VERSION_MAJOR_SingleLineInput 1
