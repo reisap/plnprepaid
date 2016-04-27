@@ -42,6 +42,7 @@
 		A79EF8271CD0862400948CA1 /* 1461753068_user_add.png in Resources */ = {isa = PBXBuildFile; fileRef = A79EF8261CD0862400948CA1 /* 1461753068_user_add.png */; };
 		A79EF82B1CD091DA00948CA1 /* WelcomeScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = A79EF8291CD091DA00948CA1 /* WelcomeScreen.m */; };
 		A79EF82C1CD091DA00948CA1 /* WelcomeScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A79EF82A1CD091DA00948CA1 /* WelcomeScreen.xib */; };
+		A79EF8381CD0AC9500948CA1 /* 1461762890_calendar-clock.png in Resources */ = {isa = PBXBuildFile; fileRef = A79EF8371CD0AC9500948CA1 /* 1461762890_calendar-clock.png */; };
 		C6FD47FD17ECE75048BC6007 /* libPods-PDAMObj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7B6F96E2BDDB1E5730C680 /* libPods-PDAMObj.a */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,7 @@
 		A79EF8281CD091DA00948CA1 /* WelcomeScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeScreen.h; sourceTree = "<group>"; };
 		A79EF8291CD091DA00948CA1 /* WelcomeScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeScreen.m; sourceTree = "<group>"; };
 		A79EF82A1CD091DA00948CA1 /* WelcomeScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeScreen.xib; sourceTree = "<group>"; };
+		A79EF8371CD0AC9500948CA1 /* 1461762890_calendar-clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1461762890_calendar-clock.png"; sourceTree = "<group>"; };
 		EE3A6547A90F4D49D608DAB9 /* Pods-PDAMObj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDAMObj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PDAMObj/Pods-PDAMObj.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,6 +167,7 @@
 				A79EF8241CD084ED00948CA1 /* 1461752752_circle-add.png */,
 				A79EF8261CD0862400948CA1 /* 1461753068_user_add.png */,
 				A79EF81E1CD07D1F00948CA1 /* 1461750753_cash-money-wallet.png */,
+				A79EF8371CD0AC9500948CA1 /* 1461762890_calendar-clock.png */,
 				A79B3A4B1CCF1C2F00B9E505 /* Library */,
 				A756FE531CCDEF6C00547C65 /* AppDelegate.h */,
 				A756FE541CCDEF6C00547C65 /* AppDelegate.m */,
@@ -313,6 +316,7 @@
 				A756FE601CCDEF6D00547C65 /* LaunchScreen.storyboard in Resources */,
 				A79EF82C1CD091DA00948CA1 /* WelcomeScreen.xib in Resources */,
 				A793100F1CCE00C900DD9D85 /* addDataUser.xib in Resources */,
+				A79EF8381CD0AC9500948CA1 /* 1461762890_calendar-clock.png in Resources */,
 				A79EF81B1CD0789600948CA1 /* 1461749591_water.png in Resources */,
 				A79EF8251CD084ED00948CA1 /* 1461752752_circle-add.png in Resources */,
 				A756FE5D1CCDEF6D00547C65 /* Assets.xcassets in Resources */,

@@ -193,7 +193,7 @@
     [popin setBlurParameters:blurParameters];
     [popin setPopinTransitionDirection:BKTPopinTransitionDirectionTop];
     //popin.presentingController = self;
-     CGRect presentationRect = CGRectOffset(CGRectInset(self.view.bounds, 0.0, 100.0), 0.0, 30.0);
+     CGRect presentationRect = CGRectOffset(CGRectInset(self.view.bounds, 0.0, 80.0), 0.0, 30.0);
    
     //Present popin on the desired controller
     //Note that if you are using a UINavigationController, the navigation bar will be active if you present

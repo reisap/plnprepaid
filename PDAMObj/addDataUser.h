@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "SingleLineTextField.h"
+#import "THDatePickerViewController.h"
 
-@interface addDataUser : UIViewController
+@interface addDataUser : UIViewController<THDatePickerDelegate>
 
 @end
