@@ -16,6 +16,7 @@
 #import "UserData.h"
 #import <MagicalRecord/MagicalRecord.h>
 #import "DetailTagihan.h"
+#import "WelcomeScreen.h"
 
 @interface ViewController (){
     NSNumber *UserCount;
@@ -65,7 +66,38 @@
     UserCount = [UserData MR_numberOfEntities];
     sortedNotifikasi= [UserData MR_findAllSortedBy:@"timestamp" ascending:YES];
     [self.tbl_data_user reloadData];
+    [self WelcomeScreen];
 }
+
+-(void)WelcomeScreen {
+    WelcomeScreen *popin = [[WelcomeScreen alloc] initWithNibName:@"WelcomeScreen" bundle:nil];
+    
+    
+    //UIViewController *popin = [[UIStoryboard storyboardWithName:@"InterestStoryBoard" bundle:nil] instantiateViewControllerWithIdentifier:@"PitchCommunity"];
+    popin.view.bounds = CGRectMake(0, 0, 280, 274);
+    [popin setPopinTransitionStyle:BKTPopinTransitionStyleSnap];
+    //[popin setPopinOptions:BKTPopinDisableAutoDismiss];
+    
+    popin.view.layer.cornerRadius = 5.0;
+    popin.view.layer.masksToBounds = YES;
+    BKTBlurParameters *blurParameters = [[BKTBlurParameters alloc] init];
+    //blurParameters.alpha = 0.5;
+    blurParameters.tintColor = [UIColor colorWithWhite:0 alpha:0.2];
+    blurParameters.radius = 0.3;
+    [popin setBlurParameters:blurParameters];
+    [popin setPopinTransitionDirection:BKTPopinTransitionDirectionTop];
+    //popin.presentingController = self;
+   // CGRect presentationRect = CGRectOffset(CGRectInset(self.view.bounds, 0.0, 100.0), 0.0, 30.0);
+    
+    //Present popin on the desired controller
+    //Note that if you are using a UINavigationController, the navigation bar will be active if you present
+    // the popin on the visible controller instead of presenting it on the navigation controller
+    [self presentPopinController:popin animated:YES completion:^{
+        NSLog(@"Popin presented !");
+    }];
+
+}
+
 - (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
 {
     return [UIImage imageNamed:@"1461749591_water.png"];
@@ -147,7 +179,7 @@
     
     //UIViewController *popin = [[UIStoryboard storyboardWithName:@"InterestStoryBoard" bundle:nil] instantiateViewControllerWithIdentifier:@"PitchCommunity"];
     //popin.view.bounds = CGRectMake(0, 0, 245, 250);
-    [popin setPopinTransitionStyle:BKTPopinTransitionStyleSpringySlide];
+    [popin setPopinTransitionStyle:BKTPopinTransitionStyleSnap];
     //[popin setPopinOptions:BKTPopinDisableAutoDismiss];
     
     popin.view.layer.cornerRadius = 5.0;

@@ -40,6 +40,8 @@
 		A79EF8231CD0845F00948CA1 /* 1461752613_add_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = A79EF8221CD0845F00948CA1 /* 1461752613_add_blue.png */; };
 		A79EF8251CD084ED00948CA1 /* 1461752752_circle-add.png in Resources */ = {isa = PBXBuildFile; fileRef = A79EF8241CD084ED00948CA1 /* 1461752752_circle-add.png */; };
 		A79EF8271CD0862400948CA1 /* 1461753068_user_add.png in Resources */ = {isa = PBXBuildFile; fileRef = A79EF8261CD0862400948CA1 /* 1461753068_user_add.png */; };
+		A79EF82B1CD091DA00948CA1 /* WelcomeScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = A79EF8291CD091DA00948CA1 /* WelcomeScreen.m */; };
+		A79EF82C1CD091DA00948CA1 /* WelcomeScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A79EF82A1CD091DA00948CA1 /* WelcomeScreen.xib */; };
 		C6FD47FD17ECE75048BC6007 /* libPods-PDAMObj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7B6F96E2BDDB1E5730C680 /* libPods-PDAMObj.a */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +97,9 @@
 		A79EF8221CD0845F00948CA1 /* 1461752613_add_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1461752613_add_blue.png; sourceTree = "<group>"; };
 		A79EF8241CD084ED00948CA1 /* 1461752752_circle-add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1461752752_circle-add.png"; sourceTree = "<group>"; };
 		A79EF8261CD0862400948CA1 /* 1461753068_user_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1461753068_user_add.png; sourceTree = "<group>"; };
+		A79EF8281CD091DA00948CA1 /* WelcomeScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeScreen.h; sourceTree = "<group>"; };
+		A79EF8291CD091DA00948CA1 /* WelcomeScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeScreen.m; sourceTree = "<group>"; };
+		A79EF82A1CD091DA00948CA1 /* WelcomeScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeScreen.xib; sourceTree = "<group>"; };
 		EE3A6547A90F4D49D608DAB9 /* Pods-PDAMObj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDAMObj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PDAMObj/Pods-PDAMObj.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +173,9 @@
 				A793100D1CCE00C900DD9D85 /* addDataUser.xib */,
 				A756FE561CCDEF6C00547C65 /* ViewController.h */,
 				A756FE571CCDEF6C00547C65 /* ViewController.m */,
+				A79EF8281CD091DA00948CA1 /* WelcomeScreen.h */,
+				A79EF8291CD091DA00948CA1 /* WelcomeScreen.m */,
+				A79EF82A1CD091DA00948CA1 /* WelcomeScreen.xib */,
 				A756FE591CCDEF6D00547C65 /* Main.storyboard */,
 				A79B3A5B1CCF4C6F00B9E505 /* cell_user.h */,
 				A79B3A5C1CCF4C6F00B9E505 /* cell_user.m */,
@@ -303,6 +311,7 @@
 				A79EF8231CD0845F00948CA1 /* 1461752613_add_blue.png in Resources */,
 				A79EF81F1CD07D1F00948CA1 /* 1461750753_cash-money-wallet.png in Resources */,
 				A756FE601CCDEF6D00547C65 /* LaunchScreen.storyboard in Resources */,
+				A79EF82C1CD091DA00948CA1 /* WelcomeScreen.xib in Resources */,
 				A793100F1CCE00C900DD9D85 /* addDataUser.xib in Resources */,
 				A79EF81B1CD0789600948CA1 /* 1461749591_water.png in Resources */,
 				A79EF8251CD084ED00948CA1 /* 1461752752_circle-add.png in Resources */,
@@ -366,6 +375,7 @@
 				A79B3A5E1CCF4C6F00B9E505 /* cell_user.m in Sources */,
 				A79B3A5A1CCF1D2600B9E505 /* User.m in Sources */,
 				A793100E1CCE00C900DD9D85 /* addDataUser.m in Sources */,
+				A79EF82B1CD091DA00948CA1 /* WelcomeScreen.m in Sources */,
 				A79310031CCDF57900DD9D85 /* KLCPopup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
