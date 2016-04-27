@@ -30,6 +30,16 @@
 		A79B3A631CCF5DDD00B9E505 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A79B3A621CCF5DDD00B9E505 /* libsqlite3.0.tbd */; };
 		A79B3A651CCF5DF000B9E505 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79B3A641CCF5DF000B9E505 /* CoreData.framework */; };
 		A79B3A671CCF5E4D00B9E505 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79B3A661CCF5E4D00B9E505 /* Foundation.framework */; };
+		A79EF8161CD0612100948CA1 /* UserData+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A79EF8131CD0612100948CA1 /* UserData+CoreDataProperties.m */; };
+		A79EF8171CD0612100948CA1 /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = A79EF8151CD0612100948CA1 /* UserData.m */; };
+		A79EF8191CD0765D00948CA1 /* icon_dropbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A79EF8181CD0765D00948CA1 /* icon_dropbox@2x.png */; };
+		A79EF81B1CD0789600948CA1 /* 1461749591_water.png in Resources */ = {isa = PBXBuildFile; fileRef = A79EF81A1CD0789600948CA1 /* 1461749591_water.png */; };
+		A79EF81D1CD07CD500948CA1 /* 1461750676_receipt-paid-paper.png in Resources */ = {isa = PBXBuildFile; fileRef = A79EF81C1CD07CD500948CA1 /* 1461750676_receipt-paid-paper.png */; };
+		A79EF81F1CD07D1F00948CA1 /* 1461750753_cash-money-wallet.png in Resources */ = {isa = PBXBuildFile; fileRef = A79EF81E1CD07D1F00948CA1 /* 1461750753_cash-money-wallet.png */; };
+		A79EF8211CD0835700948CA1 /* 1461752342_add_green.png in Resources */ = {isa = PBXBuildFile; fileRef = A79EF8201CD0835700948CA1 /* 1461752342_add_green.png */; };
+		A79EF8231CD0845F00948CA1 /* 1461752613_add_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = A79EF8221CD0845F00948CA1 /* 1461752613_add_blue.png */; };
+		A79EF8251CD084ED00948CA1 /* 1461752752_circle-add.png in Resources */ = {isa = PBXBuildFile; fileRef = A79EF8241CD084ED00948CA1 /* 1461752752_circle-add.png */; };
+		A79EF8271CD0862400948CA1 /* 1461753068_user_add.png in Resources */ = {isa = PBXBuildFile; fileRef = A79EF8261CD0862400948CA1 /* 1461753068_user_add.png */; };
 		C6FD47FD17ECE75048BC6007 /* libPods-PDAMObj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7B6F96E2BDDB1E5730C680 /* libPods-PDAMObj.a */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +83,18 @@
 		A79B3A621CCF5DDD00B9E505 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		A79B3A641CCF5DF000B9E505 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A79B3A661CCF5E4D00B9E505 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A79EF8121CD0612100948CA1 /* UserData+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserData+CoreDataProperties.h"; sourceTree = "<group>"; };
+		A79EF8131CD0612100948CA1 /* UserData+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserData+CoreDataProperties.m"; sourceTree = "<group>"; };
+		A79EF8141CD0612100948CA1 /* UserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserData.h; sourceTree = "<group>"; };
+		A79EF8151CD0612100948CA1 /* UserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserData.m; sourceTree = "<group>"; };
+		A79EF8181CD0765D00948CA1 /* icon_dropbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_dropbox@2x.png"; sourceTree = "<group>"; };
+		A79EF81A1CD0789600948CA1 /* 1461749591_water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1461749591_water.png; sourceTree = "<group>"; };
+		A79EF81C1CD07CD500948CA1 /* 1461750676_receipt-paid-paper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1461750676_receipt-paid-paper.png"; sourceTree = "<group>"; };
+		A79EF81E1CD07D1F00948CA1 /* 1461750753_cash-money-wallet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1461750753_cash-money-wallet.png"; sourceTree = "<group>"; };
+		A79EF8201CD0835700948CA1 /* 1461752342_add_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1461752342_add_green.png; sourceTree = "<group>"; };
+		A79EF8221CD0845F00948CA1 /* 1461752613_add_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1461752613_add_blue.png; sourceTree = "<group>"; };
+		A79EF8241CD084ED00948CA1 /* 1461752752_circle-add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1461752752_circle-add.png"; sourceTree = "<group>"; };
+		A79EF8261CD0862400948CA1 /* 1461753068_user_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1461753068_user_add.png; sourceTree = "<group>"; };
 		EE3A6547A90F4D49D608DAB9 /* Pods-PDAMObj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDAMObj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PDAMObj/Pods-PDAMObj.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +152,14 @@
 			isa = PBXGroup;
 			children = (
 				A79310081CCDF71B00DD9D85 /* PrefixHeader.pch */,
+				A79EF8181CD0765D00948CA1 /* icon_dropbox@2x.png */,
+				A79EF81C1CD07CD500948CA1 /* 1461750676_receipt-paid-paper.png */,
+				A79EF81A1CD0789600948CA1 /* 1461749591_water.png */,
+				A79EF8201CD0835700948CA1 /* 1461752342_add_green.png */,
+				A79EF8221CD0845F00948CA1 /* 1461752613_add_blue.png */,
+				A79EF8241CD084ED00948CA1 /* 1461752752_circle-add.png */,
+				A79EF8261CD0862400948CA1 /* 1461753068_user_add.png */,
+				A79EF81E1CD07D1F00948CA1 /* 1461750753_cash-money-wallet.png */,
 				A79B3A4B1CCF1C2F00B9E505 /* Library */,
 				A756FE531CCDEF6C00547C65 /* AppDelegate.h */,
 				A756FE541CCDEF6C00547C65 /* AppDelegate.m */,
@@ -189,6 +219,10 @@
 				A79B3A4A1CCF1C2500B9E505 /* Core Data */,
 				A79310001CCDF57900DD9D85 /* KLCPopup */,
 				A79B3A4C1CCF1C6200B9E505 /* SaveUser.xcdatamodeld */,
+				A79EF8121CD0612100948CA1 /* UserData+CoreDataProperties.h */,
+				A79EF8131CD0612100948CA1 /* UserData+CoreDataProperties.m */,
+				A79EF8141CD0612100948CA1 /* UserData.h */,
+				A79EF8151CD0612100948CA1 /* UserData.m */,
 				A79B3A571CCF1D2600B9E505 /* User.h */,
 				A79B3A581CCF1D2600B9E505 /* User.m */,
 			);
@@ -263,10 +297,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A79EF8271CD0862400948CA1 /* 1461753068_user_add.png in Resources */,
+				A79EF8191CD0765D00948CA1 /* icon_dropbox@2x.png in Resources */,
 				A79B3A5F1CCF4C6F00B9E505 /* cell_user.xib in Resources */,
+				A79EF8231CD0845F00948CA1 /* 1461752613_add_blue.png in Resources */,
+				A79EF81F1CD07D1F00948CA1 /* 1461750753_cash-money-wallet.png in Resources */,
 				A756FE601CCDEF6D00547C65 /* LaunchScreen.storyboard in Resources */,
 				A793100F1CCE00C900DD9D85 /* addDataUser.xib in Resources */,
+				A79EF81B1CD0789600948CA1 /* 1461749591_water.png in Resources */,
+				A79EF8251CD084ED00948CA1 /* 1461752752_circle-add.png in Resources */,
 				A756FE5D1CCDEF6D00547C65 /* Assets.xcassets in Resources */,
+				A79EF81D1CD07CD500948CA1 /* 1461750676_receipt-paid-paper.png in Resources */,
+				A79EF8211CD0835700948CA1 /* 1461752342_add_green.png in Resources */,
 				A756FE5B1CCDEF6D00547C65 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,7 +353,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A79EF8161CD0612100948CA1 /* UserData+CoreDataProperties.m in Sources */,
 				A756FE581CCDEF6C00547C65 /* ViewController.m in Sources */,
+				A79EF8171CD0612100948CA1 /* UserData.m in Sources */,
 				A79B3A471CCF1B5F00B9E505 /* CoreDataManager.m in Sources */,
 				A79B3A491CCF1B5F00B9E505 /* NSManagedObject+Mappings.m in Sources */,
 				A79B3A4E1CCF1C6200B9E505 /* SaveUser.xcdatamodeld in Sources */,

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DE58353ECFA1A48C76588A6F"
+               BlueprintIdentifier = "C0AD2515C5CD7ACE9F4C4C35"
                BuildableName = "SingleLineInput.bundle"
                BlueprintName = "Pods-PDAMObj-SingleLineInput-SingleLineInput"
                ReferencedContainer = "container:Pods.xcodeproj">

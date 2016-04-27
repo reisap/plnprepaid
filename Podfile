@@ -9,6 +9,9 @@ pod 'EGYWebViewController'
 pod 'IQKeyboardManager'
 pod 'ObjectiveSugar'
 pod "SingleLineInput"
+pod "MagicalRecord/CocoaLumberjack"
+pod 'THCalendarDatePicker', '~> 1.2.6'
+pod 'DZNEmptyDataSet'
 
 
 end

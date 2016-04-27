@@ -12,12 +12,13 @@
 #import "UIViewController+MaryPopin.h"
 #import <QuartzCore/QuartzCore.h>
 #import "cell_user.h"
-#import "ObjectiveRecord.h"
-#import "User.h"
+//#import "ObjectiveRecord.h"
+#import "UserData.h"
+#import <MagicalRecord/MagicalRecord.h>
 #import "DetailTagihan.h"
 
 @interface ViewController (){
-    NSUInteger UserCount;
+    NSNumber *UserCount;
      NSArray *sortedNotifikasi;
 }
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btn_add;
@@ -31,19 +32,74 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    UIBarButtonItem *_btn=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"1461752752_circle-add"]
+//                                                          style:UIBarButtonItemStylePlain
+//                                                         target:self
+//                                                         action:@selector(act_add_tagihan:)];
+//    _btn.accessibilityFrame = CGRectMake(100, 100, 30, 30);
+//    self.navigationItem.rightBarButtonItem=_btn;
+    
+    UIImageView* imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 64, 64)];
+    imgView.image = [UIImage imageNamed:@"1461749591_water.png"];
+    [imgView setContentMode:UIViewContentModeScaleAspectFit];
+    
+    self.navigationItem.titleView = imgView;
+    
+    self.navigationController.navigationBar.topItem.title = @"Tagihan";
+    //self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.navigationController.navigationBar.translucent = NO;
+    
+    self.tbl_data_user.emptyDataSetSource = self;
+    self.tbl_data_user.emptyDataSetDelegate = self;
+    
+    // A little trick for removing the cell separators
+    self.tbl_data_user.tableFooterView = [UIView new];
+    
     // Do any additional setup after loading the view, typically from a nib.
     self.tbl_data_user.estimatedRowHeight = 75.0 ;
     self.tbl_data_user.rowHeight = UITableViewAutomaticDimension;
-    sortedNotifikasi= [User all];
+    //sortedNotifikasi= [UserData MR_findAllSortedBy:@"timestamp" ascending:YES];
+    UserCount = [UserData MR_numberOfEntities];
+    sortedNotifikasi= [UserData MR_findAllSortedBy:@"timestamp" ascending:YES];
+    [self.tbl_data_user reloadData];
+}
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return [UIImage imageNamed:@"1461749591_water.png"];
+}
+- (CAAnimation *)imageAnimationForEmptyDataSet:(UIScrollView *)scrollView
+{
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath: @"transform"];
+    
+    animation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
+    animation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI_2, 0.0, 0.0, 1.0)];
+    
+    animation.duration = 0.25;
+    animation.cumulative = YES;
+    animation.repeatCount = MAXFLOAT;
+    
+    return animation;
+}
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
+{
+    NSString *text = @"No Content\nTaps + button to add new item";
+    
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:12.0f],
+                                 NSForegroundColorAttributeName: [UIColor darkGrayColor]};
+    
+    return [[NSAttributedString alloc] initWithString:text attributes:attributes];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    
-    [CoreDataManager sharedManager].modelName = @"SaveUser";
-    [CoreDataManager sharedManager].databaseName = @"SaveUser";
-    [[CoreDataManager sharedManager] useInMemoryStore];
-     UserCount = [User count];
-    NSArray *people = [User all];
+    self.navigationController.navigationBar.topItem.title = @"Tagihan";
+//    [CoreDataManager sharedManager].modelName = @"SaveUser";
+//    [CoreDataManager sharedManager].databaseName = @"SaveUser";
+//    [[CoreDataManager sharedManager] useInMemoryStore];
+     UserCount = [UserData MR_numberOfEntities];
+    NSArray *people = [UserData MR_findAllSortedBy:@"timestamp" ascending:YES];
     NSLog(@"data user save = %@",people);
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(reloadTable:)
@@ -54,9 +110,9 @@
 
 - (void) reloadTable:(NSNotification *) notification
 {
-    [CoreDataManager sharedManager].modelName = @"SaveUser";
-    UserCount = [User count];
-     sortedNotifikasi= [User all];
+   // [CoreDataManager sharedManager].modelName = @"SaveUser";
+   UserCount = [UserData MR_numberOfEntities];
+     sortedNotifikasi= [UserData MR_findAllSortedBy:@"timestamp" ascending:YES];
     [self.tbl_data_user reloadData];
     
 }
@@ -66,7 +122,12 @@
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete object from database
-       
+        UserData *object = sortedNotifikasi[indexPath.section];
+        NSString* input1 = [NSString stringWithFormat:@"%@",object.input1] ;
+        NSLog(@"ini input 1 yang mau didelete = %@",input1);
+        [object MR_deleteEntity];
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+        [self reloadTable:nil];
     }
 }
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -124,7 +185,28 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
+   
+     if (section == 0) {
+         
+         return 10.0;
+     }
+     else{
     return 0;
+     }
+}
+
+- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *headerView;
+    if (section == 0){
+        headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 70)];
+        [headerView setBackgroundColor:[UIColor whiteColor]];
+    return headerView;
+    }
+    else {
+        [headerView setBackgroundColor:[UIColor clearColor]];
+    return headerView;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
@@ -136,7 +218,7 @@
         //  [self SinkronDataNotifikasi: pageLoad];
         headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 70)];
     
-        [headerView setBackgroundColor:[UIColor clearColor]];
+        [headerView setBackgroundColor:[UIColor whiteColor]];
         
         return 0;
     }
@@ -148,14 +230,15 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
    
-    return 75.0f;
+    return 77.0f;
 }
 #pragma mark - UITableViewDataSource
 // number of section(s), now I assume there is only 1 section
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)theTableView
 {
-    NSLog(@"ini data user = %d",UserCount);
-    return UserCount;
+    NSLog(@"ini data user = %@",UserCount);
+    NSInteger value = [UserCount integerValue];
+    return value;
 }
 
 // number of row in the section, I assume there is only 1 row
@@ -168,7 +251,7 @@
 - (UITableViewCell *)tableView:(UITableView *)theTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"cell_user";
-     User *object = sortedNotifikasi[indexPath.section];
+     UserData *object = sortedNotifikasi[indexPath.section];
     
     // Similar to UITableViewCell, but
     cell_user *cell = (cell_user *)[theTableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -178,9 +261,9 @@
         cell = [topLevelObjects objectAtIndex:0];
     }
     
-    [cell.layer setShadowOffset:CGSizeMake(5, 5)];
-    [cell.layer setShadowColor:[[UIColor blackColor] CGColor]];
-    [cell.layer setShadowOpacity:0.5];
+//    [cell.layer setShadowOffset:CGSizeMake(5, 5)];
+//    [cell.layer setShadowColor:[[UIColor blackColor] CGColor]];
+//    [cell.layer setShadowOpacity:0.5];
     
     // Just want to test, so I hardcode the data
     cell.txt_judul.text = [NSString stringWithFormat:@"%@",object.judul];
@@ -194,10 +277,10 @@
 // when user tap the row, what action you want to perform
 - (void)tableView:(UITableView *)theTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    User *object = sortedNotifikasi[indexPath.section];
+    UserData *object = sortedNotifikasi[indexPath.section];
     NSString* input1 = [NSString stringWithFormat:@"%@",object.input1] ;
     NSString* input2 = [NSString stringWithFormat:@"%@",object.input2];
-    NSLog(@"selected %d row", indexPath.row);
+    NSLog(@"selected %ld row", (long)indexPath.row);
     
     NSString * storyboardName = @"Main";
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];

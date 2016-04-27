@@ -52,7 +52,37 @@
 #define COCOAPODS_POD_AVAILABLE_CarbonKit
 #define COCOAPODS_VERSION_MAJOR_CarbonKit 2
 #define COCOAPODS_VERSION_MINOR_CarbonKit 1
-#define COCOAPODS_VERSION_PATCH_CarbonKit 6
+#define COCOAPODS_VERSION_PATCH_CarbonKit 7
+
+// CocoaLumberjack
+#define COCOAPODS_POD_AVAILABLE_CocoaLumberjack
+#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack 2
+#define COCOAPODS_VERSION_MINOR_CocoaLumberjack 2
+#define COCOAPODS_VERSION_PATCH_CocoaLumberjack 0
+
+// CocoaLumberjack/Core
+#define COCOAPODS_POD_AVAILABLE_CocoaLumberjack_Core
+#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack_Core 2
+#define COCOAPODS_VERSION_MINOR_CocoaLumberjack_Core 2
+#define COCOAPODS_VERSION_PATCH_CocoaLumberjack_Core 0
+
+// CocoaLumberjack/Default
+#define COCOAPODS_POD_AVAILABLE_CocoaLumberjack_Default
+#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack_Default 2
+#define COCOAPODS_VERSION_MINOR_CocoaLumberjack_Default 2
+#define COCOAPODS_VERSION_PATCH_CocoaLumberjack_Default 0
+
+// CocoaLumberjack/Extensions
+#define COCOAPODS_POD_AVAILABLE_CocoaLumberjack_Extensions
+#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack_Extensions 2
+#define COCOAPODS_VERSION_MINOR_CocoaLumberjack_Extensions 2
+#define COCOAPODS_VERSION_PATCH_CocoaLumberjack_Extensions 0
+
+// DZNEmptyDataSet
+#define COCOAPODS_POD_AVAILABLE_DZNEmptyDataSet
+#define COCOAPODS_VERSION_MAJOR_DZNEmptyDataSet 1
+#define COCOAPODS_VERSION_MINOR_DZNEmptyDataSet 8
+#define COCOAPODS_VERSION_PATCH_DZNEmptyDataSet 0
 
 // EGYWebViewController
 #define COCOAPODS_POD_AVAILABLE_EGYWebViewController
@@ -65,6 +95,24 @@
 #define COCOAPODS_VERSION_MAJOR_IQKeyboardManager 4
 #define COCOAPODS_VERSION_MINOR_IQKeyboardManager 0
 #define COCOAPODS_VERSION_PATCH_IQKeyboardManager 2
+
+// KNSemiModalViewController_hons82
+#define COCOAPODS_POD_AVAILABLE_KNSemiModalViewController_hons82
+#define COCOAPODS_VERSION_MAJOR_KNSemiModalViewController_hons82 0
+#define COCOAPODS_VERSION_MINOR_KNSemiModalViewController_hons82 4
+#define COCOAPODS_VERSION_PATCH_KNSemiModalViewController_hons82 4
+
+// MagicalRecord/CocoaLumberjack
+#define COCOAPODS_POD_AVAILABLE_MagicalRecord_CocoaLumberjack
+#define COCOAPODS_VERSION_MAJOR_MagicalRecord_CocoaLumberjack 2
+#define COCOAPODS_VERSION_MINOR_MagicalRecord_CocoaLumberjack 3
+#define COCOAPODS_VERSION_PATCH_MagicalRecord_CocoaLumberjack 2
+
+// MagicalRecord/Core
+#define COCOAPODS_POD_AVAILABLE_MagicalRecord_Core
+#define COCOAPODS_VERSION_MAJOR_MagicalRecord_Core 2
+#define COCOAPODS_VERSION_MINOR_MagicalRecord_Core 3
+#define COCOAPODS_VERSION_PATCH_MagicalRecord_Core 2
 
 // MaryPopin
 #define COCOAPODS_POD_AVAILABLE_MaryPopin
@@ -83,4 +131,10 @@
 #define COCOAPODS_VERSION_MAJOR_SingleLineInput 1
 #define COCOAPODS_VERSION_MINOR_SingleLineInput 0
 #define COCOAPODS_VERSION_PATCH_SingleLineInput 7
+
+// THCalendarDatePicker
+#define COCOAPODS_POD_AVAILABLE_THCalendarDatePicker
+#define COCOAPODS_VERSION_MAJOR_THCalendarDatePicker 1
+#define COCOAPODS_VERSION_MINOR_THCalendarDatePicker 2
+#define COCOAPODS_VERSION_PATCH_THCalendarDatePicker 7
 

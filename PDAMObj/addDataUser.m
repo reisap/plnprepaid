@@ -8,11 +8,13 @@
 
 #import "addDataUser.h"
 #import "ObjectiveRecord.h"
-#import "User.h"
+#import "UserData.h"
 #import "SingleLineTextField.h"
 #import <sqlite3.h>
 #import <CoreData/CoreData.h>
 #import "UIViewController+MaryPopin.h"
+#import <MagicalRecord/MagicalRecord.h>
+
 
 @interface addDataUser ()
 @property (weak, nonatomic) IBOutlet UIButton *btn_submit;
@@ -44,18 +46,26 @@
     if(![[_txt_input1 text] isEqualToString:@""] && ![[_txt_input2 text] isEqualToString:@""] &&![[_txt_judul text] isEqualToString:@""]){
         
         NSLog(@"ini judul = %@", _txt_judul.text);
-        User *isi = [User create];
+//        UserData *isi = [UserData create];
+//        isi.judul = _txt_judul.text;
+//        isi.input1 = _txt_input1.text;
+//        isi.input2 = _txt_input2.text;
+//        [isi save];
+        NSString * timestamp = [NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970] * 1000];
+        UserData *isi = [UserData MR_createEntity];
         isi.judul = _txt_judul.text;
         isi.input1 = _txt_input1.text;
         isi.input2 = _txt_input2.text;
+        isi.timestamp = [NSNumber numberWithInteger:[timestamp integerValue]];
+        
+        //Save to persistant storage
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         
         
-        
-        [isi save];
         [[NSNotificationCenter defaultCenter]
          postNotificationName:@"sendUser"
          object:self];
-        NSArray *people = [User all];
+        NSArray *people = [UserData all];
         NSLog(@"data user save = %@",people);
         [self.navigationController dismissCurrentPopinControllerAnimated:YES];
         

@@ -20,29 +20,53 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - CarbonKit (2.1.6)
+  - CarbonKit (2.1.7)
+  - CocoaLumberjack (2.2.0):
+    - CocoaLumberjack/Default (= 2.2.0)
+    - CocoaLumberjack/Extensions (= 2.2.0)
+  - CocoaLumberjack/Core (2.2.0)
+  - CocoaLumberjack/Default (2.2.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.2.0):
+    - CocoaLumberjack/Default
+  - DZNEmptyDataSet (1.8)
   - EGYWebViewController (1.2)
   - IQKeyboardManager (4.0.2)
+  - KNSemiModalViewController_hons82 (0.4.4)
+  - MagicalRecord/CocoaLumberjack (2.3.2):
+    - CocoaLumberjack (~> 2.0)
+    - MagicalRecord/Core
+  - MagicalRecord/Core (2.3.2)
   - MaryPopin (1.4.2)
   - ObjectiveSugar (1.1.0)
   - SingleLineInput (1.0.7)
+  - THCalendarDatePicker (1.2.7):
+    - KNSemiModalViewController_hons82 (~> 0.4.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5.4)
   - CarbonKit (~> 2.1)
+  - DZNEmptyDataSet
   - EGYWebViewController
   - IQKeyboardManager
+  - MagicalRecord/CocoaLumberjack
   - MaryPopin
   - ObjectiveSugar
   - SingleLineInput
+  - THCalendarDatePicker (~> 1.2.6)
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
-  CarbonKit: 101a21d2c50ab9453fa4fcbf29de7c81008d8b65
+  CarbonKit: 88f90b6290af1306c82fd5ba8d2aa4dd19e08083
+  CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
+  DZNEmptyDataSet: d2351b2e8daefa40433ef292e246e21f6be31a7b
   EGYWebViewController: 2f4e3ab19ec54ba6243e3e50b2d95091b114f4b5
   IQKeyboardManager: 2341089c4ae25fa2fa82ce356a259fcd267dc6b6
+  KNSemiModalViewController_hons82: 22aead5ef5d8ca749bc1babb43fa7d6f14b030a3
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   MaryPopin: 24affc7fab9608dcad88279e32e774e5de5d54ac
   ObjectiveSugar: a6a25f23d657c19df0a0b972466d5b5ca9f5295c
   SingleLineInput: 4def171b91a2325d315bc8896f952b83f9941666
+  THCalendarDatePicker: a3c3bea65eaf0fdd7044ff5d4886056dc72164fd
 
 COCOAPODS: 0.37.2

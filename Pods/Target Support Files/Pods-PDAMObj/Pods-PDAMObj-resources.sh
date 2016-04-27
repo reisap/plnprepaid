@@ -71,6 +71,9 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "EGYWebViewController/ARChromeActivity/ARChromeActivity@2x~ipad.png"
   install_resource "EGYWebViewController/ARChromeActivity/ARChromeActivity~ipad.png"
   install_resource "IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
+  install_resource "THCalendarDatePicker/THCalendarDatePicker/THDateDay.xib"
+  install_resource "THCalendarDatePicker/THCalendarDatePicker/THDatePickerViewController.xib"
+  install_resource "THCalendarDatePicker/THCalendarDatePicker/Images.xcassets"
   install_resource "${BUILT_PRODUCTS_DIR}/SingleLineInput.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -87,6 +90,9 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "EGYWebViewController/ARChromeActivity/ARChromeActivity@2x~ipad.png"
   install_resource "EGYWebViewController/ARChromeActivity/ARChromeActivity~ipad.png"
   install_resource "IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
+  install_resource "THCalendarDatePicker/THCalendarDatePicker/THDateDay.xib"
+  install_resource "THCalendarDatePicker/THCalendarDatePicker/THDatePickerViewController.xib"
+  install_resource "THCalendarDatePicker/THCalendarDatePicker/Images.xcassets"
   install_resource "${BUILT_PRODUCTS_DIR}/SingleLineInput.bundle"
 fi
 

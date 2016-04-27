@@ -232,9 +232,8 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController
        viewControllerAfterViewController:(UIViewController *)viewController {
-
-    NSInteger index = selectedIndex + 1;
-
+    NSInteger index = [self.viewControllers allKeysForObject:viewController].firstObject.integerValue;
+	index += 1;
     if (index < self.carbonSegmentedControl.numberOfSegments) {
         return [self viewControllerAtIndex:index];
     }
@@ -243,9 +242,8 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController
       viewControllerBeforeViewController:(UIViewController *)viewController {
-
-    NSInteger index = selectedIndex - 1;
-
+    NSInteger index = [self.viewControllers allKeysForObject:viewController].firstObject.integerValue;
+	index -= 1;
     if (index >= 0) {
         return [self viewControllerAtIndex:index];
     }
@@ -255,10 +253,14 @@
 #pragma mark - PageViewController Delegate
 
 - (void)pageViewController:(UIPageViewController *)pageViewController
+willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers {
+	[self callDelegateForStartingTransition];
+}
+
+- (void)pageViewController:(UIPageViewController *)pageViewController
         didFinishAnimating:(BOOL)finished
    previousViewControllers:(NSArray *)previousViewControllers
-       transitionCompleted:(BOOL)completed {
-
+	   transitionCompleted:(BOOL)completed {
     if (completed) {
         id currentView = pageViewController.viewControllers.firstObject;
         selectedIndex =
@@ -268,7 +270,9 @@
         [self.carbonSegmentedControl updateIndicatorWithAnimation:NO];
 
         [self callDelegateForCurrentIndex];
-    }
+	}
+	
+	[self callDelegateForFinishingTransition];
 }
 
 #pragma mark - ScrollView Delegate
@@ -636,6 +640,20 @@
         NSInteger index = self.carbonSegmentedControl.selectedSegmentIndex;
         [self.delegate carbonTabSwipeNavigation:self didMoveAtIndex:index];
     }
+}
+
+- (void)callDelegateForStartingTransition {
+	if ([self.delegate respondsToSelector:@selector(carbonTabSwipeNavigation:willBeginTransitionFromIndex:)]) {
+		NSInteger index = self.carbonSegmentedControl.selectedSegmentIndex;
+		[self.delegate carbonTabSwipeNavigation:self willBeginTransitionFromIndex:index];
+	}
+}
+
+- (void)callDelegateForFinishingTransition {
+	if ([self.delegate respondsToSelector:@selector(carbonTabSwipeNavigation:didFinishTransitionToIndex:)]) {
+		NSInteger index = self.carbonSegmentedControl.selectedSegmentIndex;
+		[self.delegate carbonTabSwipeNavigation:self didFinishTransitionToIndex:index];
+	}
 }
 
 - (void)setTabBarHeight:(CGFloat)height {

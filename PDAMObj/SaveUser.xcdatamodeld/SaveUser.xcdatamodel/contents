@@ -5,7 +5,14 @@
         <attribute name="input2" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="judul" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="UserData" representedClassName="UserData" syncable="YES">
+        <attribute name="input1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="input2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="judul" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
     <elements>
         <element name="User" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="UserData" positionX="-63" positionY="9" width="128" height="105"/>
     </elements>
 </model>

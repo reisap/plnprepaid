@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ObjectiveRecord.h"
 #import "CoreDataManager.h"
+#import <MagicalRecord/MagicalRecord.h>
 
 @interface AppDelegate ()
 
@@ -18,6 +19,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [MagicalRecord setupAutoMigratingCoreDataStack];
     
     [CoreDataManager sharedManager].modelName = @"SaveUser";
     [CoreDataManager sharedManager].databaseName = @"SaveUser";
