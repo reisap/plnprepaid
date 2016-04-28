@@ -21,21 +21,21 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdh-A7-nsY">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="water-tap.png" translatesAutoresizingMaskIntoConstraints="NO" id="a7B-f6-Dhb">
-                            <rect key="frame" x="0.0" y="42" width="76" height="76"/>
-                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resulties" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VoZ-RF-lDX">
-                            <rect key="frame" x="80" y="49" width="98" height="21"/>
+                            <rect key="frame" x="80" y="64" width="98" height="21"/>
                             <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Help you to check bill in PDAM Tirta Pakuan Bogor" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vs9-l5-tTP">
-                            <rect key="frame" x="80" y="69" width="192" height="58"/>
+                            <rect key="frame" x="80" y="87" width="192" height="39"/>
                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="180.png" translatesAutoresizingMaskIntoConstraints="NO" id="a7B-f6-Dhb">
+                            <rect key="frame" x="0.0" y="58" width="76" height="76"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" red="0.46666666670000001" green="0.70196078429999997" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
@@ -64,6 +64,6 @@
         </view>
     </objects>
     <resources>
-        <image name="water-tap.png" width="128" height="128"/>
+        <image name="180.png" width="180" height="180"/>
     </resources>
 </document>

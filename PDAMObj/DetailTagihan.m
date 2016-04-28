@@ -33,6 +33,11 @@
 //    EGYWebViewController *webViewController = [[EGYWebViewController alloc] initWithAddress:@"http://yahoo.com"];
 //    [self.navigationController pushViewController:webViewController animated:YES];
     // Do any additional setup after loading the view.
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [SVProgressHUD showWithStatus:@"Loading"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,6 +71,7 @@
                                                     cancelButtonTitle:@"OK"
                                                     otherButtonTitles:nil];
               [alert show];
+                [SVProgressHUD dismiss];
           }];
         
         

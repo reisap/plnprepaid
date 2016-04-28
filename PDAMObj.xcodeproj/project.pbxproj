@@ -35,6 +35,7 @@
 		A790BEED1CD1DB3A004AB1EE /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A790BEEC1CD1DB3A004AB1EE /* libxml2.tbd */; };
 		A790BEF11CD1E167004AB1EE /* TentangPengembang.m in Sources */ = {isa = PBXBuildFile; fileRef = A790BEEF1CD1E167004AB1EE /* TentangPengembang.m */; };
 		A790BEF21CD1E167004AB1EE /* TentangPengembang.xib in Resources */ = {isa = PBXBuildFile; fileRef = A790BEF01CD1E167004AB1EE /* TentangPengembang.xib */; };
+		A790BEF41CD211F6004AB1EE /* 180.png in Resources */ = {isa = PBXBuildFile; fileRef = A790BEF31CD211F6004AB1EE /* 180.png */; };
 		A79310031CCDF57900DD9D85 /* KLCPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = A79310021CCDF57900DD9D85 /* KLCPopup.m */; };
 		A79310051CCDF5AF00DD9D85 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79310041CCDF5AF00DD9D85 /* QuartzCore.framework */; };
 		A79310071CCDF65700DD9D85 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79310061CCDF65700DD9D85 /* UIKit.framework */; };
@@ -109,6 +110,7 @@
 		A790BEEE1CD1E167004AB1EE /* TentangPengembang.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TentangPengembang.h; sourceTree = "<group>"; };
 		A790BEEF1CD1E167004AB1EE /* TentangPengembang.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TentangPengembang.m; sourceTree = "<group>"; };
 		A790BEF01CD1E167004AB1EE /* TentangPengembang.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TentangPengembang.xib; sourceTree = "<group>"; };
+		A790BEF31CD211F6004AB1EE /* 180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 180.png; sourceTree = "<group>"; };
 		A79310011CCDF57900DD9D85 /* KLCPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCPopup.h; sourceTree = "<group>"; };
 		A79310021CCDF57900DD9D85 /* KLCPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCPopup.m; sourceTree = "<group>"; };
 		A79310041CCDF5AF00DD9D85 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -238,6 +240,7 @@
 				A790BED51CD1CDB2004AB1EE /* water-drop.png */,
 				A790BED71CD1CE11004AB1EE /* medical-app.png */,
 				A790BED91CD1CE6A004AB1EE /* brainstorm.png */,
+				A790BEF31CD211F6004AB1EE /* 180.png */,
 				A79B3A4B1CCF1C2F00B9E505 /* Library */,
 				A756FE531CCDEF6C00547C65 /* AppDelegate.h */,
 				A756FE541CCDEF6C00547C65 /* AppDelegate.m */,
@@ -425,6 +428,7 @@
 				A79EF8381CD0AC9500948CA1 /* 1461762890_calendar-clock.png in Resources */,
 				A79EF81B1CD0789600948CA1 /* 1461749591_water.png in Resources */,
 				A790BEDF1CD1CEF7004AB1EE /* cell_menu.xib in Resources */,
+				A790BEF41CD211F6004AB1EE /* 180.png in Resources */,
 				A79EF8251CD084ED00948CA1 /* 1461752752_circle-add.png in Resources */,
 				A790BECE1CD1C0A4004AB1EE /* circle-menu.png in Resources */,
 				A756FE5D1CCDEF6D00547C65 /* Assets.xcassets in Resources */,

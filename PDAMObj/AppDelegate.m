@@ -47,6 +47,7 @@
     
     self.viewController = [[JASidePanelController alloc] init];
     self.viewController.leftPanel = [[MenuKiri alloc] init];
+    //self.viewController.leftFixedWidth = 60;
     NSString * storyboardName = @"Main";
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
     ViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"ViewController"];

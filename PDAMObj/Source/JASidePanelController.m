@@ -599,30 +599,29 @@ static char ja_kvoContext;
 - (CGFloat)_correctMovement:(CGFloat)movement {
     CGFloat position = _centerPanelRestingFrame.origin.x + movement;
     if (self.state == JASidePanelCenterVisible) {
-        if ((position > 0.0f && !self.leftPanel) || (position < 0.0f && !self.rightPanel)) {
+        if (self.state != JASidePanelLeftVisible) {
+            if (position >= self.leftVisibleWidth) {
+                return self.leftVisibleWidth;
+            }
+        }
+        else if ((position > 0.0f && !self.leftPanel) || (position < 0.0f && !self.rightPanel)) {
             return 0.0f;
-        } else if (!self.allowLeftOverpan && position > self.leftVisibleWidth) {
-            return self.leftVisibleWidth;
-        } else if (!self.allowRightOverpan && position < -self.rightVisibleWidth) {
-            return -self.rightVisibleWidth;
         }
     } else if (self.state == JASidePanelRightVisible && !self.allowRightOverpan) {
-        if (position < -self.rightVisibleWidth) {
+        if ((position + _centerPanelRestingFrame.size.width) < (self.rightPanelContainer.frame.size.width - self.rightVisibleWidth)) {
             return 0.0f;
-        } else if ((self.style == JASidePanelMultipleActive || self.pushesSidePanels) && position > 0.0f) {
-            return -_centerPanelRestingFrame.origin.x;
         } else if (position > self.rightPanelContainer.frame.origin.x) {
             return self.rightPanelContainer.frame.origin.x - _centerPanelRestingFrame.origin.x;
         }
     } else if (self.state == JASidePanelLeftVisible  && !self.allowLeftOverpan) {
         if (position > self.leftVisibleWidth) {
             return 0.0f;
-        } else if ((self.style == JASidePanelMultipleActive || self.pushesSidePanels) && position < 0.0f) {
-            return -_centerPanelRestingFrame.origin.x;
         } else if (position < self.leftPanelContainer.frame.origin.x) {
-            return self.leftPanelContainer.frame.origin.x - _centerPanelRestingFrame.origin.x;
+            return  self.leftPanelContainer.frame.origin.x - _centerPanelRestingFrame.origin.x;
         }
+         else if (self.leftVisibleWidth + movement > self.leftFixedWidth) { return self.leftPanelContainer.frame.origin.x; } else if (self.leftVisibleWidth + movement < self.leftPanelContainer.frame.origin.x) { return self.leftPanelContainer.frame.origin.x - self.leftFixedWidth; }
     }
+   
     return movement;
 }
 

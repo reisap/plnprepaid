@@ -106,7 +106,7 @@
                             <constraint firstItem="Kcl-br-Tnh" firstAttribute="top" secondItem="etg-vt-Je4" secondAttribute="bottom" id="HLb-ZS-VG8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="DetailQ" id="Igd-J1-cMk"/>
+                    <navigationItem key="navigationItem" title="Resulties" id="Igd-J1-cMk"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="webView" destination="etg-vt-Je4" id="OcK-Mg-DX1"/>
