@@ -126,6 +126,12 @@
 #define COCOAPODS_VERSION_MINOR_ObjectiveSugar 1
 #define COCOAPODS_VERSION_PATCH_ObjectiveSugar 0
 
+// REComposeViewController
+#define COCOAPODS_POD_AVAILABLE_REComposeViewController
+#define COCOAPODS_VERSION_MAJOR_REComposeViewController 2
+#define COCOAPODS_VERSION_MINOR_REComposeViewController 3
+#define COCOAPODS_VERSION_PATCH_REComposeViewController 2
+
 // SVProgressHUD
 #define COCOAPODS_POD_AVAILABLE_SVProgressHUD
 #define COCOAPODS_VERSION_MAJOR_SVProgressHUD 2

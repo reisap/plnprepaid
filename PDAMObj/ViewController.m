@@ -17,6 +17,8 @@
 #import <MagicalRecord/MagicalRecord.h>
 #import "DetailTagihan.h"
 #import "WelcomeScreen.h"
+#import "UIViewController+JASidePanel.h"
+#import "JASidePanelController.h"
 
 @interface ViewController (){
     NSNumber *UserCount;
@@ -47,11 +49,32 @@
     self.navigationItem.titleView = imgView;
     
     self.navigationController.navigationBar.topItem.title = @"Tagihan";
-    //self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:119.0/255.0 green:179.0/255.0 blue:212.0/255.0 alpha:1];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     self.navigationController.navigationBar.translucent = NO;
+    
+    UIImage* image3 = [UIImage imageNamed:@"circle-menu.png"];
+    CGRect frameimg = CGRectMake(0, 0, 32, 32);
+    UIButton *someButton = [[UIButton alloc] initWithFrame:frameimg];
+    [someButton setBackgroundImage:image3 forState:UIControlStateNormal];
+    [someButton addTarget:self action:@selector(openMenu) forControlEvents:UIControlEventTouchUpInside];
+    [someButton setShowsTouchWhenHighlighted:YES];
+    
+    UIBarButtonItem *mailbutton =[[UIBarButtonItem alloc] initWithCustomView:someButton];
+    self.navigationItem.leftBarButtonItem=mailbutton;
+    
+    
+    UIImage* image3a = [UIImage imageNamed:@"user1.png"];
+    CGRect frameimga = CGRectMake(0, 0, 32, 32);
+    UIButton *someButtona = [[UIButton alloc] initWithFrame:frameimga];
+    [someButtona setBackgroundImage:image3a forState:UIControlStateNormal];
+    [someButtona addTarget:self action:@selector(act_add_tagihan:) forControlEvents:UIControlEventTouchUpInside];
+    [someButtona setShowsTouchWhenHighlighted:YES];
+    
+    UIBarButtonItem *mailbuttona =[[UIBarButtonItem alloc] initWithCustomView:someButtona];
+    self.navigationItem.rightBarButtonItem=mailbuttona;
     
     self.tbl_data_user.emptyDataSetSource = self;
     self.tbl_data_user.emptyDataSetDelegate = self;
@@ -66,7 +89,25 @@
     UserCount = [UserData MR_numberOfEntities];
     sortedNotifikasi= [UserData MR_findAllSortedBy:@"timestamp" ascending:YES];
     [self.tbl_data_user reloadData];
+    
+   
+    
+    NSString *savedValue = [[NSUserDefaults standardUserDefaults]
+                            stringForKey:@"welcomescreen"];
+    
+    if(savedValue ==NULL){
     [self WelcomeScreen];
+        NSString *valueToSave = @"1";
+        [[NSUserDefaults standardUserDefaults] setObject:valueToSave forKey:@"welcomescreen"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    else{
+        
+    }
+}
+
+-(void)openMenu {
+    [self.sidePanelController showLeftPanelAnimated:YES];
 }
 
 //php -S 192.168.2.12:8080 -t public public/index.php

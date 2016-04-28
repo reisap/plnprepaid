@@ -99,7 +99,7 @@
 
 - (void)datePicker:(THDatePickerViewController *)datePicker selectedDate:(NSDate *)selectedDate {
     NSLog(@"Date selected: %@",[_formatter stringFromDate:selectedDate]);
-    _txt_tgl_notif.text = [NSString stringWithFormat:@"%@",[_formatter stringFromDate:selectedDate]];
+   // _txt_tgl_notif.text = [NSString stringWithFormat:@"%@",[_formatter stringFromDate:selectedDate]];
 }
 
 - (void)didReceiveMemoryWarning {

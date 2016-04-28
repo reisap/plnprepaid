@@ -13,6 +13,28 @@
 		A756FE5B1CCDEF6D00547C65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A756FE591CCDEF6D00547C65 /* Main.storyboard */; };
 		A756FE5D1CCDEF6D00547C65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A756FE5C1CCDEF6D00547C65 /* Assets.xcassets */; };
 		A756FE601CCDEF6D00547C65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A756FE5E1CCDEF6D00547C65 /* LaunchScreen.storyboard */; };
+		A790BEC01CD1B857004AB1EE /* TGLGuillotineMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A790BEBF1CD1B857004AB1EE /* TGLGuillotineMenu.m */; };
+		A790BEC61CD1B86C004AB1EE /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = A790BEC31CD1B86C004AB1EE /* JASidePanelController.m */; };
+		A790BEC71CD1B86C004AB1EE /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = A790BEC51CD1B86C004AB1EE /* UIViewController+JASidePanel.m */; };
+		A790BECB1CD1BB6A004AB1EE /* MenuKiri.m in Sources */ = {isa = PBXBuildFile; fileRef = A790BEC91CD1BB6A004AB1EE /* MenuKiri.m */; };
+		A790BECC1CD1BB6A004AB1EE /* MenuKiri.xib in Resources */ = {isa = PBXBuildFile; fileRef = A790BECA1CD1BB6A004AB1EE /* MenuKiri.xib */; };
+		A790BECE1CD1C0A4004AB1EE /* circle-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = A790BECD1CD1C0A4004AB1EE /* circle-menu.png */; };
+		A790BED21CD1C46E004AB1EE /* user1.png in Resources */ = {isa = PBXBuildFile; fileRef = A790BED11CD1C46E004AB1EE /* user1.png */; };
+		A790BED41CD1C86D004AB1EE /* water-tap.png in Resources */ = {isa = PBXBuildFile; fileRef = A790BED31CD1C86D004AB1EE /* water-tap.png */; };
+		A790BED61CD1CDB2004AB1EE /* water-drop.png in Resources */ = {isa = PBXBuildFile; fileRef = A790BED51CD1CDB2004AB1EE /* water-drop.png */; };
+		A790BED81CD1CE11004AB1EE /* medical-app.png in Resources */ = {isa = PBXBuildFile; fileRef = A790BED71CD1CE11004AB1EE /* medical-app.png */; };
+		A790BEDA1CD1CE6A004AB1EE /* brainstorm.png in Resources */ = {isa = PBXBuildFile; fileRef = A790BED91CD1CE6A004AB1EE /* brainstorm.png */; };
+		A790BEDE1CD1CEF7004AB1EE /* cell_menu.m in Sources */ = {isa = PBXBuildFile; fileRef = A790BEDC1CD1CEF7004AB1EE /* cell_menu.m */; };
+		A790BEDF1CD1CEF7004AB1EE /* cell_menu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A790BEDD1CD1CEF7004AB1EE /* cell_menu.xib */; };
+		A790BEE11CD1D45D004AB1EE /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A790BEE01CD1D45D004AB1EE /* Social.framework */; };
+		A790BEE31CD1D5E9004AB1EE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A790BEE21CD1D5E9004AB1EE /* MobileCoreServices.framework */; };
+		A790BEE51CD1D5F8004AB1EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A790BEE41CD1D5F8004AB1EE /* SystemConfiguration.framework */; };
+		A790BEE71CD1DAFC004AB1EE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A790BEE61CD1DAFC004AB1EE /* Security.framework */; };
+		A790BEE91CD1DB07004AB1EE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A790BEE81CD1DB07004AB1EE /* CFNetwork.framework */; };
+		A790BEEB1CD1DB26004AB1EE /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A790BEEA1CD1DB26004AB1EE /* libz.tbd */; };
+		A790BEED1CD1DB3A004AB1EE /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A790BEEC1CD1DB3A004AB1EE /* libxml2.tbd */; };
+		A790BEF11CD1E167004AB1EE /* TentangPengembang.m in Sources */ = {isa = PBXBuildFile; fileRef = A790BEEF1CD1E167004AB1EE /* TentangPengembang.m */; };
+		A790BEF21CD1E167004AB1EE /* TentangPengembang.xib in Resources */ = {isa = PBXBuildFile; fileRef = A790BEF01CD1E167004AB1EE /* TentangPengembang.xib */; };
 		A79310031CCDF57900DD9D85 /* KLCPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = A79310021CCDF57900DD9D85 /* KLCPopup.m */; };
 		A79310051CCDF5AF00DD9D85 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79310041CCDF5AF00DD9D85 /* QuartzCore.framework */; };
 		A79310071CCDF65700DD9D85 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79310061CCDF65700DD9D85 /* UIKit.framework */; };
@@ -59,6 +81,34 @@
 		A756FE5C1CCDEF6D00547C65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A756FE5F1CCDEF6D00547C65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A756FE611CCDEF6D00547C65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A790BEBE1CD1B857004AB1EE /* TGLGuillotineMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGLGuillotineMenu.h; sourceTree = "<group>"; };
+		A790BEBF1CD1B857004AB1EE /* TGLGuillotineMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGLGuillotineMenu.m; sourceTree = "<group>"; };
+		A790BEC21CD1B86C004AB1EE /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
+		A790BEC31CD1B86C004AB1EE /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASidePanelController.m; sourceTree = "<group>"; };
+		A790BEC41CD1B86C004AB1EE /* UIViewController+JASidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JASidePanel.h"; sourceTree = "<group>"; };
+		A790BEC51CD1B86C004AB1EE /* UIViewController+JASidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JASidePanel.m"; sourceTree = "<group>"; };
+		A790BEC81CD1BB6A004AB1EE /* MenuKiri.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuKiri.h; sourceTree = "<group>"; };
+		A790BEC91CD1BB6A004AB1EE /* MenuKiri.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuKiri.m; sourceTree = "<group>"; };
+		A790BECA1CD1BB6A004AB1EE /* MenuKiri.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuKiri.xib; sourceTree = "<group>"; };
+		A790BECD1CD1C0A4004AB1EE /* circle-menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-menu.png"; sourceTree = "<group>"; };
+		A790BED11CD1C46E004AB1EE /* user1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user1.png; sourceTree = "<group>"; };
+		A790BED31CD1C86D004AB1EE /* water-tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "water-tap.png"; sourceTree = "<group>"; };
+		A790BED51CD1CDB2004AB1EE /* water-drop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "water-drop.png"; sourceTree = "<group>"; };
+		A790BED71CD1CE11004AB1EE /* medical-app.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "medical-app.png"; sourceTree = "<group>"; };
+		A790BED91CD1CE6A004AB1EE /* brainstorm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brainstorm.png; sourceTree = "<group>"; };
+		A790BEDB1CD1CEF7004AB1EE /* cell_menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cell_menu.h; sourceTree = "<group>"; };
+		A790BEDC1CD1CEF7004AB1EE /* cell_menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cell_menu.m; sourceTree = "<group>"; };
+		A790BEDD1CD1CEF7004AB1EE /* cell_menu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cell_menu.xib; sourceTree = "<group>"; };
+		A790BEE01CD1D45D004AB1EE /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		A790BEE21CD1D5E9004AB1EE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A790BEE41CD1D5F8004AB1EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A790BEE61CD1DAFC004AB1EE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A790BEE81CD1DB07004AB1EE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A790BEEA1CD1DB26004AB1EE /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		A790BEEC1CD1DB3A004AB1EE /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		A790BEEE1CD1E167004AB1EE /* TentangPengembang.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TentangPengembang.h; sourceTree = "<group>"; };
+		A790BEEF1CD1E167004AB1EE /* TentangPengembang.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TentangPengembang.m; sourceTree = "<group>"; };
+		A790BEF01CD1E167004AB1EE /* TentangPengembang.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TentangPengembang.xib; sourceTree = "<group>"; };
 		A79310011CCDF57900DD9D85 /* KLCPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCPopup.h; sourceTree = "<group>"; };
 		A79310021CCDF57900DD9D85 /* KLCPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCPopup.m; sourceTree = "<group>"; };
 		A79310041CCDF5AF00DD9D85 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -110,12 +160,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A790BEED1CD1DB3A004AB1EE /* libxml2.tbd in Frameworks */,
+				A790BEEB1CD1DB26004AB1EE /* libz.tbd in Frameworks */,
+				A79310051CCDF5AF00DD9D85 /* QuartzCore.framework in Frameworks */,
+				A790BEE91CD1DB07004AB1EE /* CFNetwork.framework in Frameworks */,
+				A790BEE71CD1DAFC004AB1EE /* Security.framework in Frameworks */,
+				A790BEE51CD1D5F8004AB1EE /* SystemConfiguration.framework in Frameworks */,
+				A790BEE31CD1D5E9004AB1EE /* MobileCoreServices.framework in Frameworks */,
+				A790BEE11CD1D45D004AB1EE /* Social.framework in Frameworks */,
 				A79B3A671CCF5E4D00B9E505 /* Foundation.framework in Frameworks */,
 				A79B3A651CCF5DF000B9E505 /* CoreData.framework in Frameworks */,
 				A79B3A631CCF5DDD00B9E505 /* libsqlite3.0.tbd in Frameworks */,
 				A79B3A611CCF5DD500B9E505 /* libsqlite3.tbd in Frameworks */,
 				A79310071CCDF65700DD9D85 /* UIKit.framework in Frameworks */,
-				A79310051CCDF5AF00DD9D85 /* QuartzCore.framework in Frameworks */,
 				C6FD47FD17ECE75048BC6007 /* libPods-PDAMObj.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +183,13 @@
 		277C4B8AAE483F348A5CE503 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A790BEEC1CD1DB3A004AB1EE /* libxml2.tbd */,
+				A790BEEA1CD1DB26004AB1EE /* libz.tbd */,
+				A790BEE81CD1DB07004AB1EE /* CFNetwork.framework */,
+				A790BEE61CD1DAFC004AB1EE /* Security.framework */,
+				A790BEE41CD1D5F8004AB1EE /* SystemConfiguration.framework */,
+				A790BEE21CD1D5E9004AB1EE /* MobileCoreServices.framework */,
+				A790BEE01CD1D45D004AB1EE /* Social.framework */,
 				A79B3A661CCF5E4D00B9E505 /* Foundation.framework */,
 				A79B3A641CCF5DF000B9E505 /* CoreData.framework */,
 				A79B3A621CCF5DDD00B9E505 /* libsqlite3.0.tbd */,
@@ -168,9 +232,21 @@
 				A79EF8261CD0862400948CA1 /* 1461753068_user_add.png */,
 				A79EF81E1CD07D1F00948CA1 /* 1461750753_cash-money-wallet.png */,
 				A79EF8371CD0AC9500948CA1 /* 1461762890_calendar-clock.png */,
+				A790BECD1CD1C0A4004AB1EE /* circle-menu.png */,
+				A790BED31CD1C86D004AB1EE /* water-tap.png */,
+				A790BED11CD1C46E004AB1EE /* user1.png */,
+				A790BED51CD1CDB2004AB1EE /* water-drop.png */,
+				A790BED71CD1CE11004AB1EE /* medical-app.png */,
+				A790BED91CD1CE6A004AB1EE /* brainstorm.png */,
 				A79B3A4B1CCF1C2F00B9E505 /* Library */,
 				A756FE531CCDEF6C00547C65 /* AppDelegate.h */,
 				A756FE541CCDEF6C00547C65 /* AppDelegate.m */,
+				A790BEC81CD1BB6A004AB1EE /* MenuKiri.h */,
+				A790BEC91CD1BB6A004AB1EE /* MenuKiri.m */,
+				A790BECA1CD1BB6A004AB1EE /* MenuKiri.xib */,
+				A790BEEE1CD1E167004AB1EE /* TentangPengembang.h */,
+				A790BEEF1CD1E167004AB1EE /* TentangPengembang.m */,
+				A790BEF01CD1E167004AB1EE /* TentangPengembang.xib */,
 				A793100B1CCE00C900DD9D85 /* addDataUser.h */,
 				A793100C1CCE00C900DD9D85 /* addDataUser.m */,
 				A793100D1CCE00C900DD9D85 /* addDataUser.xib */,
@@ -183,6 +259,9 @@
 				A79B3A5B1CCF4C6F00B9E505 /* cell_user.h */,
 				A79B3A5C1CCF4C6F00B9E505 /* cell_user.m */,
 				A79B3A5D1CCF4C6F00B9E505 /* cell_user.xib */,
+				A790BEDB1CD1CEF7004AB1EE /* cell_menu.h */,
+				A790BEDC1CD1CEF7004AB1EE /* cell_menu.m */,
+				A790BEDD1CD1CEF7004AB1EE /* cell_menu.xib */,
 				A79310101CCE032700DD9D85 /* DetailTagihan.h */,
 				A79310111CCE032700DD9D85 /* DetailTagihan.m */,
 				A756FE5C1CCDEF6D00547C65 /* Assets.xcassets */,
@@ -199,6 +278,27 @@
 				A756FE511CCDEF6C00547C65 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A790BEBD1CD1B857004AB1EE /* GuillotineMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A790BEBE1CD1B857004AB1EE /* TGLGuillotineMenu.h */,
+				A790BEBF1CD1B857004AB1EE /* TGLGuillotineMenu.m */,
+			);
+			path = GuillotineMenu;
+			sourceTree = "<group>";
+		};
+		A790BEC11CD1B86C004AB1EE /* JASidePanels */ = {
+			isa = PBXGroup;
+			children = (
+				A790BEC21CD1B86C004AB1EE /* JASidePanelController.h */,
+				A790BEC31CD1B86C004AB1EE /* JASidePanelController.m */,
+				A790BEC41CD1B86C004AB1EE /* UIViewController+JASidePanel.h */,
+				A790BEC51CD1B86C004AB1EE /* UIViewController+JASidePanel.m */,
+			);
+			name = JASidePanels;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		A79310001CCDF57900DD9D85 /* KLCPopup */ = {
@@ -227,6 +327,8 @@
 		A79B3A4B1CCF1C2F00B9E505 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				A790BEC11CD1B86C004AB1EE /* JASidePanels */,
+				A790BEBD1CD1B857004AB1EE /* GuillotineMenu */,
 				A79B3A4A1CCF1C2500B9E505 /* Core Data */,
 				A79310001CCDF57900DD9D85 /* KLCPopup */,
 				A79B3A4C1CCF1C6200B9E505 /* SaveUser.xcdatamodeld */,
@@ -309,20 +411,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				A79EF8271CD0862400948CA1 /* 1461753068_user_add.png in Resources */,
+				A790BECC1CD1BB6A004AB1EE /* MenuKiri.xib in Resources */,
 				A79EF8191CD0765D00948CA1 /* icon_dropbox@2x.png in Resources */,
 				A79B3A5F1CCF4C6F00B9E505 /* cell_user.xib in Resources */,
 				A79EF8231CD0845F00948CA1 /* 1461752613_add_blue.png in Resources */,
 				A79EF81F1CD07D1F00948CA1 /* 1461750753_cash-money-wallet.png in Resources */,
+				A790BED21CD1C46E004AB1EE /* user1.png in Resources */,
 				A756FE601CCDEF6D00547C65 /* LaunchScreen.storyboard in Resources */,
 				A79EF82C1CD091DA00948CA1 /* WelcomeScreen.xib in Resources */,
 				A793100F1CCE00C900DD9D85 /* addDataUser.xib in Resources */,
+				A790BEDA1CD1CE6A004AB1EE /* brainstorm.png in Resources */,
+				A790BEF21CD1E167004AB1EE /* TentangPengembang.xib in Resources */,
 				A79EF8381CD0AC9500948CA1 /* 1461762890_calendar-clock.png in Resources */,
 				A79EF81B1CD0789600948CA1 /* 1461749591_water.png in Resources */,
+				A790BEDF1CD1CEF7004AB1EE /* cell_menu.xib in Resources */,
 				A79EF8251CD084ED00948CA1 /* 1461752752_circle-add.png in Resources */,
+				A790BECE1CD1C0A4004AB1EE /* circle-menu.png in Resources */,
 				A756FE5D1CCDEF6D00547C65 /* Assets.xcassets in Resources */,
+				A790BED81CD1CE11004AB1EE /* medical-app.png in Resources */,
 				A79EF81D1CD07CD500948CA1 /* 1461750676_receipt-paid-paper.png in Resources */,
 				A79EF8211CD0835700948CA1 /* 1461752342_add_green.png in Resources */,
 				A756FE5B1CCDEF6D00547C65 /* Main.storyboard in Resources */,
+				A790BED61CD1CDB2004AB1EE /* water-drop.png in Resources */,
+				A790BED41CD1C86D004AB1EE /* water-tap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,10 +480,16 @@
 				A79EF8161CD0612100948CA1 /* UserData+CoreDataProperties.m in Sources */,
 				A756FE581CCDEF6C00547C65 /* ViewController.m in Sources */,
 				A79EF8171CD0612100948CA1 /* UserData.m in Sources */,
+				A790BECB1CD1BB6A004AB1EE /* MenuKiri.m in Sources */,
 				A79B3A471CCF1B5F00B9E505 /* CoreDataManager.m in Sources */,
 				A79B3A491CCF1B5F00B9E505 /* NSManagedObject+Mappings.m in Sources */,
 				A79B3A4E1CCF1C6200B9E505 /* SaveUser.xcdatamodeld in Sources */,
+				A790BEC61CD1B86C004AB1EE /* JASidePanelController.m in Sources */,
+				A790BEC01CD1B857004AB1EE /* TGLGuillotineMenu.m in Sources */,
 				A79310121CCE032700DD9D85 /* DetailTagihan.m in Sources */,
+				A790BEF11CD1E167004AB1EE /* TentangPengembang.m in Sources */,
+				A790BEDE1CD1CEF7004AB1EE /* cell_menu.m in Sources */,
+				A790BEC71CD1B86C004AB1EE /* UIViewController+JASidePanel.m in Sources */,
 				A756FE551CCDEF6C00547C65 /* AppDelegate.m in Sources */,
 				A79B3A481CCF1B5F00B9E505 /* NSManagedObject+ActiveRecord.m in Sources */,
 				A756FE521CCDEF6C00547C65 /* main.m in Sources */,

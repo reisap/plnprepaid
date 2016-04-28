@@ -13,6 +13,7 @@ pod "MagicalRecord/CocoaLumberjack"
 pod 'THCalendarDatePicker', '~> 1.2.6'
 pod 'DZNEmptyDataSet'
 pod 'SVProgressHUD'
+pod 'REComposeViewController'
 
 
 end

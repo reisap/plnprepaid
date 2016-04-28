@@ -10,6 +10,9 @@
 #import "ObjectiveRecord.h"
 #import "CoreDataManager.h"
 #import <MagicalRecord/MagicalRecord.h>
+#import "MenuKiri.h"
+#import "ViewController.h"
+#import "JASidePanelController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,8 @@
 
 @implementation AppDelegate
 
+@synthesize window = _window;
+@synthesize viewController = _viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [MagicalRecord setupAutoMigratingCoreDataStack];
@@ -37,6 +42,22 @@
     [[SingleLineTextField appearance] setInputFont:[UIFont boldSystemFontOfSize:15]];
     [[SingleLineTextField appearance] setPlaceHolderFont:[UIFont boldSystemFontOfSize:13]];
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    self.viewController = [[JASidePanelController alloc] init];
+    self.viewController.leftPanel = [[MenuKiri alloc] init];
+    NSString * storyboardName = @"Main";
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+    ViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+    self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:vc];
+   
+   
+    
+    self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
+    return YES;
+    
     return YES;
 }
 

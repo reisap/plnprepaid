@@ -10,10 +10,13 @@
 #import "IQKeyboardManager.h"
 #import "SingleLineTextField.h"
 
-
+@class JASidePanelController;
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+
+@property (strong, nonatomic) JASidePanelController *viewController;
 
 
 @end
