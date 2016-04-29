@@ -42,6 +42,10 @@
 		A793100E1CCE00C900DD9D85 /* addDataUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A793100C1CCE00C900DD9D85 /* addDataUser.m */; };
 		A793100F1CCE00C900DD9D85 /* addDataUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = A793100D1CCE00C900DD9D85 /* addDataUser.xib */; };
 		A79310121CCE032700DD9D85 /* DetailTagihan.m in Sources */ = {isa = PBXBuildFile; fileRef = A79310111CCE032700DD9D85 /* DetailTagihan.m */; };
+		A797C5D91CD345B800A1C4A3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A797C5D51CD345B800A1C4A3 /* Info.plist */; };
+		A797C5DA1CD345B800A1C4A3 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A797C5D61CD345B800A1C4A3 /* iRate.bundle */; };
+		A797C5DB1CD345B800A1C4A3 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = A797C5D81CD345B800A1C4A3 /* iRate.m */; };
+		A797C5DF1CD346E700A1C4A3 /* ATAppUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = A797C5DE1CD346E700A1C4A3 /* ATAppUpdater.m */; };
 		A79B3A471CCF1B5F00B9E505 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A79B3A411CCF1B5F00B9E505 /* CoreDataManager.m */; };
 		A79B3A481CCF1B5F00B9E505 /* NSManagedObject+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = A79B3A431CCF1B5F00B9E505 /* NSManagedObject+ActiveRecord.m */; };
 		A79B3A491CCF1B5F00B9E505 /* NSManagedObject+Mappings.m in Sources */ = {isa = PBXBuildFile; fileRef = A79B3A451CCF1B5F00B9E505 /* NSManagedObject+Mappings.m */; };
@@ -82,6 +86,7 @@
 		A756FE5C1CCDEF6D00547C65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A756FE5F1CCDEF6D00547C65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A756FE611CCDEF6D00547C65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A75FAD271CD34B49009B6E25 /* PDAMObj.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PDAMObj.entitlements; sourceTree = "<group>"; };
 		A790BEBE1CD1B857004AB1EE /* TGLGuillotineMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGLGuillotineMenu.h; sourceTree = "<group>"; };
 		A790BEBF1CD1B857004AB1EE /* TGLGuillotineMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGLGuillotineMenu.m; sourceTree = "<group>"; };
 		A790BEC21CD1B86C004AB1EE /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
@@ -121,6 +126,12 @@
 		A793100D1CCE00C900DD9D85 /* addDataUser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addDataUser.xib; sourceTree = "<group>"; };
 		A79310101CCE032700DD9D85 /* DetailTagihan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTagihan.h; sourceTree = "<group>"; };
 		A79310111CCE032700DD9D85 /* DetailTagihan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTagihan.m; sourceTree = "<group>"; };
+		A797C5D51CD345B800A1C4A3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A797C5D61CD345B800A1C4A3 /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
+		A797C5D71CD345B800A1C4A3 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
+		A797C5D81CD345B800A1C4A3 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
+		A797C5DD1CD346E700A1C4A3 /* ATAppUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATAppUpdater.h; sourceTree = "<group>"; };
+		A797C5DE1CD346E700A1C4A3 /* ATAppUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATAppUpdater.m; sourceTree = "<group>"; };
 		A79B3A401CCF1B5F00B9E505 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		A79B3A411CCF1B5F00B9E505 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		A79B3A421CCF1B5F00B9E505 /* NSManagedObject+ActiveRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+ActiveRecord.h"; sourceTree = "<group>"; };
@@ -224,6 +235,7 @@
 		A756FE4F1CCDEF6C00547C65 /* PDAMObj */ = {
 			isa = PBXGroup;
 			children = (
+				A75FAD271CD34B49009B6E25 /* PDAMObj.entitlements */,
 				A79310081CCDF71B00DD9D85 /* PrefixHeader.pch */,
 				A79EF8181CD0765D00948CA1 /* icon_dropbox@2x.png */,
 				A79EF81C1CD07CD500948CA1 /* 1461750676_receipt-paid-paper.png */,
@@ -313,6 +325,26 @@
 			path = KLCPopup;
 			sourceTree = "<group>";
 		};
+		A797C5D41CD345B800A1C4A3 /* iRate */ = {
+			isa = PBXGroup;
+			children = (
+				A797C5D51CD345B800A1C4A3 /* Info.plist */,
+				A797C5D61CD345B800A1C4A3 /* iRate.bundle */,
+				A797C5D71CD345B800A1C4A3 /* iRate.h */,
+				A797C5D81CD345B800A1C4A3 /* iRate.m */,
+			);
+			path = iRate;
+			sourceTree = "<group>";
+		};
+		A797C5DC1CD346E700A1C4A3 /* ATAppUpdater */ = {
+			isa = PBXGroup;
+			children = (
+				A797C5DD1CD346E700A1C4A3 /* ATAppUpdater.h */,
+				A797C5DE1CD346E700A1C4A3 /* ATAppUpdater.m */,
+			);
+			path = ATAppUpdater;
+			sourceTree = "<group>";
+		};
 		A79B3A4A1CCF1C2500B9E505 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +362,8 @@
 		A79B3A4B1CCF1C2F00B9E505 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				A797C5DC1CD346E700A1C4A3 /* ATAppUpdater */,
+				A797C5D41CD345B800A1C4A3 /* iRate */,
 				A790BEC11CD1B86C004AB1EE /* JASidePanels */,
 				A790BEBD1CD1B857004AB1EE /* GuillotineMenu */,
 				A79B3A4A1CCF1C2500B9E505 /* Core Data */,
@@ -388,6 +422,20 @@
 					A756FE4C1CCDEF6B00547C65 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = S53A734269;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.GameCenter = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -419,6 +467,7 @@
 				A79EF8191CD0765D00948CA1 /* icon_dropbox@2x.png in Resources */,
 				A79B3A5F1CCF4C6F00B9E505 /* cell_user.xib in Resources */,
 				A79EF8231CD0845F00948CA1 /* 1461752613_add_blue.png in Resources */,
+				A797C5DA1CD345B800A1C4A3 /* iRate.bundle in Resources */,
 				A79EF81F1CD07D1F00948CA1 /* 1461750753_cash-money-wallet.png in Resources */,
 				A790BED21CD1C46E004AB1EE /* user1.png in Resources */,
 				A756FE601CCDEF6D00547C65 /* LaunchScreen.storyboard in Resources */,
@@ -426,6 +475,7 @@
 				A793100F1CCE00C900DD9D85 /* addDataUser.xib in Resources */,
 				A790BEDA1CD1CE6A004AB1EE /* brainstorm.png in Resources */,
 				A790BEF21CD1E167004AB1EE /* TentangPengembang.xib in Resources */,
+				A797C5D91CD345B800A1C4A3 /* Info.plist in Resources */,
 				A79EF8381CD0AC9500948CA1 /* 1461762890_calendar-clock.png in Resources */,
 				A79EF81B1CD0789600948CA1 /* 1461749591_water.png in Resources */,
 				A790BEDF1CD1CEF7004AB1EE /* cell_menu.xib in Resources */,
@@ -499,9 +549,11 @@
 				A79B3A481CCF1B5F00B9E505 /* NSManagedObject+ActiveRecord.m in Sources */,
 				A756FE521CCDEF6C00547C65 /* main.m in Sources */,
 				A79B3A5E1CCF4C6F00B9E505 /* cell_user.m in Sources */,
+				A797C5DB1CD345B800A1C4A3 /* iRate.m in Sources */,
 				A79B3A5A1CCF1D2600B9E505 /* User.m in Sources */,
 				A793100E1CCE00C900DD9D85 /* addDataUser.m in Sources */,
 				A79EF82B1CD091DA00948CA1 /* WelcomeScreen.m in Sources */,
+				A797C5DF1CD346E700A1C4A3 /* ATAppUpdater.m in Sources */,
 				A79310031CCDF57900DD9D85 /* KLCPopup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -615,16 +667,17 @@
 			baseConfigurationReference = EE3A6547A90F4D49D608DAB9 /* Pods-PDAMObj.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: reisa prasaptaraya (S53A734269)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: reisa prasaptaraya (S53A734269)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = PDAMObj/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reisap.pdam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "43e89280-d609-42b4-91c6-6b06bf505dde";
 			};
 			name = Debug;
 		};
@@ -633,16 +686,17 @@
 			baseConfigurationReference = 4B15F260D648DB6D2BC28C9C /* Pods-PDAMObj.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: reisa prasaptaraya (S53A734269)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: reisa prasaptaraya (S53A734269)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = PDAMObj/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reisap.pdam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "43e89280-d609-42b4-91c6-6b06bf505dde";
 			};
 			name = Release;
 		};
