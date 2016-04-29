@@ -37,7 +37,7 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    [SVProgressHUD showWithStatus:@"Loading"];
+    [SVProgressHUD showWithStatus:@""];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,9 +52,10 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         // time-consuming task
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager.requestSerializer setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    [manager POST:@"http://192.168.2.12:8080/api/pdamku"
+    [manager POST:@"http://apiku.openkontes.com/api/pdamku"
        parameters:@{@"input1": input1, @"input2":input2}
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               NSString* encodedString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
