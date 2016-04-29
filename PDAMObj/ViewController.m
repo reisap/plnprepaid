@@ -19,6 +19,7 @@
 #import "WelcomeScreen.h"
 #import "UIViewController+JASidePanel.h"
 #import "JASidePanelController.h"
+#import "SVProgressHUD.h"
 
 @interface ViewController (){
     NSNumber *UserCount;
@@ -106,6 +107,8 @@
     }
 }
 
+
+
 -(void)openMenu {
     [self.sidePanelController showLeftPanelAnimated:YES];
 }
@@ -169,6 +172,7 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
+     [SVProgressHUD dismiss];
     self.navigationController.navigationBar.topItem.title = @"Tagihan";
 //    [CoreDataManager sharedManager].modelName = @"SaveUser";
 //    [CoreDataManager sharedManager].databaseName = @"SaveUser";
