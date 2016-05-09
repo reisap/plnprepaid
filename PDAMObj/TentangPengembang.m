@@ -23,9 +23,9 @@
     imgView.image = [UIImage imageNamed:@"light-bulb.png"];
     [imgView setContentMode:UIViewContentModeScaleAspectFit];
     
-    self.navigationItem.titleView = imgView;
+   // self.navigationItem.titleView = imgView;
     
-    self.navigationController.navigationBar.topItem.title = @"Tagihan";
+    self.navigationController.navigationBar.topItem.title = @"Tentang Pengembang";
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:137.0/255.0 green:47.0/255.0 blue:64.0/255.0 alpha:1];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar
