@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="280" height="274"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Ini adalah aplikasi untuk melihat tagihan PDAM anda di PDAM Tirta Pakuan Kota Bogor." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIu-ya-qow">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Ini adalah aplikasi untuk melihat history pemakaian Token Listrik PLN Prepaid" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIu-ya-qow">
                     <rect key="frame" x="40" y="181" width="200" height="114"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -34,14 +34,14 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1461749591_water.png" translatesAutoresizingMaskIntoConstraints="NO" id="Die-oY-Mhs">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="light-bulb.png" translatesAutoresizingMaskIntoConstraints="NO" id="Die-oY-Mhs">
                     <rect key="frame" x="102" y="28" width="78" height="152"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="152" id="G6G-tS-ikk"/>
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" red="0.46666666670000001" green="0.70196078429999997" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.53725490200000003" green="0.1843137255" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Die-oY-Mhs" secondAttribute="trailing" constant="100" id="06H-3a-qDp"/>
                 <constraint firstItem="AFY-QK-fPc" firstAttribute="top" secondItem="Die-oY-Mhs" secondAttribute="bottom" constant="-20" id="EX9-n2-mFi"/>
@@ -58,6 +58,6 @@
         </view>
     </objects>
     <resources>
-        <image name="1461749591_water.png" width="128" height="128"/>
+        <image name="light-bulb.png" width="256" height="256"/>
     </resources>
 </document>

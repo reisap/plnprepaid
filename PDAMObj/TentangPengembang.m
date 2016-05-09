@@ -26,7 +26,7 @@
     self.navigationItem.titleView = imgView;
     
     self.navigationController.navigationBar.topItem.title = @"Tagihan";
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:119.0/255.0 green:179.0/255.0 blue:212.0/255.0 alpha:1];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:137.0/255.0 green:47.0/255.0 blue:64.0/255.0 alpha:1];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];

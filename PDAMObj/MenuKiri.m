@@ -36,13 +36,13 @@
     [id_menu addObject:@"3"];
     
     
-    [NamaMenu addObject:@"Resulties"];
+    [NamaMenu addObject:@"Electricity"];
     [NamaMenu addObject:@"Share Aplikasi"];
     [NamaMenu addObject:@"Tentang Pengembang"];
     
-    [gambarMenu addObject:@"water-drop.png"];
+    [gambarMenu addObject:@"light-bulbwhite.png"];
     [gambarMenu addObject:@"medical-app.png"];
-    [gambarMenu addObject:@"brainstorm.png"];
+    [gambarMenu addObject:@"businessman-talking-about-data-analysis.png"];
     
     [self.view_template.layer setShadowOffset:CGSizeMake(1, 1)];
     [self.view_template.layer setShadowColor:[[UIColor blackColor] CGColor]];

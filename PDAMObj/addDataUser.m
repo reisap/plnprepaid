@@ -14,12 +14,16 @@
 #import <CoreData/CoreData.h>
 #import "UIViewController+MaryPopin.h"
 #import <MagicalRecord/MagicalRecord.h>
+#import "TNRadioButtonGroup.h"
+#import "DLRadioButton.h"
+#import "AFNetworking.h"
 
 
 
 
 @interface addDataUser (){
     NSString* setDateNotifikasi;
+    int checkPilihan;
 }
 @property (weak, nonatomic) IBOutlet UIButton *btn_submit;
 @property (weak, nonatomic) IBOutlet SingleLineTextField *txt_judul;
@@ -31,12 +35,15 @@
 @property (nonatomic, strong) THDatePickerViewController * datePicker;
 @property (nonatomic, retain) NSDate * curDate;
 @property (nonatomic, retain) NSDateFormatter * formatter;
+@property (weak, nonatomic) IBOutlet DLRadioButton *btn_nometer;
+@property (weak, nonatomic) IBOutlet DLRadioButton *btn_idpelanggan;
 
 @end
 
 @implementation addDataUser
 
 - (void)viewDidLoad {
+    checkPilihan = -1;
     [super viewDidLoad];
     self.curDate = [NSDate date];
     self.formatter = [[NSDateFormatter alloc] init];
@@ -106,48 +113,135 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)pilihIDPElanggan:(DLRadioButton *)radioButton {
+    NSLog(@"ini sendernya = %@",radioButton.selectedButton.titleLabel.text);
+    if ([radioButton.selectedButton.titleLabel.text isEqualToString:@"No Meter"]) {
+        checkPilihan = 0;
+    } else {
+        checkPilihan = 1;
+    }
+    
+}
 - (IBAction)act_submit:(id)sender {
-    if(![[_txt_input1 text] isEqualToString:@""] && ![[_txt_input2 text] isEqualToString:@""] && ![[_txt_judul text] isEqualToString:@""] && ![setDateNotifikasi isEqualToString:@""] && setDateNotifikasi != NULL){
+    if(![[_txt_input1 text] isEqualToString:@""] && ![[_txt_judul text] isEqualToString:@""] && checkPilihan != -1){
         
         NSLog(@"ini judul = %@", _txt_judul.text);
-//        UserData *isi = [UserData create];
+
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            // time-consuming task
+            AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+            AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
+            
+            [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+            [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+            manager.requestSerializer = requestSerializer;
+            NSDictionary *params;
+            if(checkPilihan == 0){
+               
+                    params = @{@"nomormeter": _txt_input1.text
+                              };
+            }
+            else{
+                params = @{@"idpel": _txt_input1.text
+                           };
+
+            }
+            
+
+            
+            [manager GET:@"http://103.28.22.227:5277/v1/prepaid"
+               parameters:params
+                  success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                     // NSString* encodedString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+                      
+                      NSLog(@"responseObject = %@", responseObject);
+                      
+                      NSDictionary *responseDictUSer = responseObject;
+                      // NSMutableArray* values =[[NSMutableArray alloc]init];
+                      //values = [responseDictUSer objectForKey:@"rows"];
+                       NSDictionary* valuesHistory = [responseDictUSer objectForKey:@"HistoryPrepaid"];
+                      NSDictionary* values = [valuesHistory objectForKey:@"DataPelanggan"];
+                      NSArray* valuesTransaksi = [valuesHistory objectForKey:@"TransaksiPrepaid"];
+                      
+                      NSLog(@"values data pelanggan= %@",values);
+                      
+                      //ini data pelanggannya
+                      NSString *Alamat = [NSString stringWithFormat:@"%@",values[@"Alamat"]];
+                      NSString *Daya = [NSString stringWithFormat:@"%@",values[@"Daya"]];
+                      NSString *Idpel = [NSString stringWithFormat:@"%@",values[@"Idpel"]];
+                      NSString *Nama = [NSString stringWithFormat:@"%@",values[@"Nama"]];
+                      NSString *Nomorkwhku = [NSString stringWithFormat:@"%@",values[@"Nomorkwh"]];
+                      NSString *Tarif = [NSString stringWithFormat:@"%@",values[@"Tarif"]];
+                      
+                      
+                      NSLog(@"Idpel data Idpel= %@",Idpel);
+                      
+                      
+                      int i =0;
+                      int count = [valuesTransaksi count];
+                      
+                      //akomodir carii default
+                      
+                      if(count != 0){
+                          while (i < count){
+                            
+                              NSMutableDictionary* dataName = [valuesTransaksi objectAtIndex:i];
+                              NSString* Daya = [dataName  objectForKey:@"Daya"];
+                              NSString* Jambayar = [dataName  objectForKey:@"Jambayar"];
+                              NSString* Jenis_transaksi = [dataName  objectForKey:@"Jenis_transaksi"];
+                              NSString* Namabank = [dataName  objectForKey:@"Namabank"];
+                              NSString* Nomorkwh = [dataName  objectForKey:@"Nomorkwh"];
+                              NSString* Pemkwh = [dataName  objectForKey:@"Pemkwh"];
+                              NSString* Rptoken = [dataName  objectForKey:@"Rptoken"];
+                              NSString* Tglbayar = [dataName  objectForKey:@"Tglbayar"];
+                              NSString* Tgltransaksi = [dataName  objectForKey:@"Tgltransaksi"];
+                              NSString* Token = [dataName  objectForKey:@"Token"];
+                             
+                              
+                              NSLog(@"ini no token saya = %@",Token);
+                             
+                              
+                              i++;
+                          }
+                      }
+                      
+                      
+                      [self.navigationController dismissCurrentPopinControllerAnimated:YES];
+                      
+                      [self dismissCurrentPopinControllerAnimated:YES completion:^{
+                          NSLog(@"Popin dismissed !");
+                      }];
+
+                  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                      NSLog(@"Error: %@", error);
+                  }];
+            
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+            });
+        });
+
+       
+        
+        // Request to reload table view data
+//        [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadData" object:self];
+//        NSString * timestamp = [NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970] * 1000];
+//        UserData *isi = [UserData MR_createEntity];
 //        isi.judul = _txt_judul.text;
 //        isi.input1 = _txt_input1.text;
 //        isi.input2 = _txt_input2.text;
-//        [isi save];
-        // Schedule the notification
-        UILocalNotification* localNotification = [[UILocalNotification alloc] init];
-        localNotification.fireDate = self.curDate;
-        localNotification.alertBody = _txt_judul.text;
-        localNotification.alertAction = @"Bayar PDAM Tirta Pakuan";
-        localNotification.timeZone = [NSTimeZone defaultTimeZone];
-        localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
-        
-        [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-        
-        // Request to reload table view data
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadData" object:self];
-        NSString * timestamp = [NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970] * 1000];
-        UserData *isi = [UserData MR_createEntity];
-        isi.judul = _txt_judul.text;
-        isi.input1 = _txt_input1.text;
-        isi.input2 = _txt_input2.text;
-        isi.timestamp = [NSNumber numberWithInteger:[timestamp integerValue]];
-        
-        //Save to persistant storage
-        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
-        
-        
-        [[NSNotificationCenter defaultCenter]
-         postNotificationName:@"sendUser"
-         object:self];
-        NSArray *people = [UserData all];
-        NSLog(@"data user save = %@",people);
-        [self.navigationController dismissCurrentPopinControllerAnimated:YES];
-        
-        [self dismissCurrentPopinControllerAnimated:YES completion:^{
-            NSLog(@"Popin dismissed !");
-        }];
+//        isi.timestamp = [NSNumber numberWithInteger:[timestamp integerValue]];
+//        
+//        //Save to persistant storage
+//        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+//        
+//        
+//        [[NSNotificationCenter defaultCenter]
+//         postNotificationName:@"sendUser"
+//         object:self];
+//        NSArray *people = [UserData all];
+//        NSLog(@"data user save = %@",people);
         
         
     }

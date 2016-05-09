@@ -34,7 +34,7 @@
     [iRate sharedInstance].onlyPromptIfLatestVersion = NO;
     
     //enable preview mode
-    [iRate sharedInstance].previewMode = YES;
+   // [iRate sharedInstance].previewMode = YES;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

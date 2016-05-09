@@ -43,14 +43,14 @@
 //    _btn.accessibilityFrame = CGRectMake(100, 100, 30, 30);
 //    self.navigationItem.rightBarButtonItem=_btn;
     
-    UIImageView* imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 64, 64)];
-    imgView.image = [UIImage imageNamed:@"1461749591_water.png"];
+    UIImageView* imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 32, 32)];
+    imgView.image = [UIImage imageNamed:@"light-bulb.png"];
     [imgView setContentMode:UIViewContentModeScaleAspectFit];
     
     self.navigationItem.titleView = imgView;
     
     self.navigationController.navigationBar.topItem.title = @"Tagihan";
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:119.0/255.0 green:179.0/255.0 blue:212.0/255.0 alpha:1];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:137.0/255.0 green:47.0/255.0 blue:64.0/255.0 alpha:1];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
@@ -146,7 +146,10 @@
 
 - (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
 {
-    return [UIImage imageNamed:@"1461749591_water.png"];
+    UIImageView* imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 32, 32)];
+    imgView.image = [UIImage imageNamed:@"light-bulb.png"];
+    [imgView setContentMode:UIViewContentModeScaleAspectFit];
+    return imgView.image;
 }
 - (CAAnimation *)imageAnimationForEmptyDataSet:(UIScrollView *)scrollView
 {

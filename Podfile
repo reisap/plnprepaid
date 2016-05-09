@@ -14,6 +14,8 @@ pod 'THCalendarDatePicker', '~> 1.2.6'
 pod 'DZNEmptyDataSet'
 pod 'SVProgressHUD'
 pod 'REComposeViewController'
+pod 'TNRadioButtonGroup'
+pod 'DLRadioButton', '~> 1.4'
 
 
 end
