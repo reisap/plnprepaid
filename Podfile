@@ -16,6 +16,7 @@ pod 'SVProgressHUD'
 pod 'REComposeViewController'
 pod 'TNRadioButtonGroup'
 pod 'DLRadioButton', '~> 1.4'
+pod 'FontAwesomeIconFactory'
 
 
 end
