@@ -19,6 +19,7 @@
 #import "AFNetworking.h"
 #import "PLN.h"
 #import "SVProgressHUD.h"
+#import "Historypln.h"
 
 
 
@@ -26,6 +27,8 @@
 @interface addDataUser (){
     NSString* setDateNotifikasi;
     int checkPilihan;
+    int count;
+    int i;
 }
 @property (weak, nonatomic) IBOutlet UIButton *btn_submit;
 @property (weak, nonatomic) IBOutlet SingleLineTextField *txt_judul;
@@ -167,6 +170,7 @@
                       
                       NSLog(@"values data pelanggan= %@",values);
                       
+                      if(values != NULL){
                       //ini data pelanggannya
                       NSString *Alamat = [NSString stringWithFormat:@"%@",values[@"Alamat"]];
                       NSString *Daya = [NSString stringWithFormat:@"%@",values[@"Daya"]];
@@ -190,16 +194,21 @@
               
                       //Save to persistant storage
                       [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+                      i =0;
+                      if(valuesTransaksi != NULL && valuesTransaksi != Nil){
+                      //count = [valuesTransaksi count];
+                      }
                       
                       
-                      int i =0;
-                      int count = [valuesTransaksi count];
+                      
+                     
                       
                       //akomodir carii default
                       
                       if(count != 0){
                           while (i < count){
                             
+                              Historypln *isi = [Historypln MR_createEntity];
                               NSMutableDictionary* dataName = [valuesTransaksi objectAtIndex:i];
                               NSString* Daya = [dataName  objectForKey:@"Daya"];
                               NSString* Jambayar = [dataName  objectForKey:@"Jambayar"];
@@ -211,6 +220,19 @@
                               NSString* Tglbayar = [dataName  objectForKey:@"Tglbayar"];
                               NSString* Tgltransaksi = [dataName  objectForKey:@"Tgltransaksi"];
                               NSString* Token = [dataName  objectForKey:@"Token"];
+                              
+                              isi.daya=Daya;
+                              isi.jambayar=Jambayar;
+                              isi.jenistransaksi=Jenis_transaksi;
+                              isi.namabank=Namabank;
+                              isi.nomorkwh=Nomorkwh;
+                              isi.pemkwh=Pemkwh;
+                              isi.rptoken=Rptoken;
+                              isi.tglbayar=Tglbayar;
+                              isi.tgltransaksi=Tgltransaksi;
+                              isi.token=Token;
+                              isi.timestamp = [NSNumber numberWithInteger:[timestamp integerValue]];
+                              [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
                              
                               
                               NSLog(@"ini no token saya = %@",Token);
@@ -218,6 +240,8 @@
                               
                               i++;
                           }
+                      }
+                          
                       }
                       
                       [SVProgressHUD dismiss];

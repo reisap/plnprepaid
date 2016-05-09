@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
-    <entity name="Historypln" syncable="YES">
+    <entity name="Historypln" representedClassName="Historypln" syncable="YES">
         <attribute name="daya" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="idpelanggan" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="jambayar" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="jenistransaksi" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="namabank" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nomorkwh" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pemkwh" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rptoken" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tglbayar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tgltransaksi" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timestamp" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -35,7 +36,7 @@
     </entity>
     <elements>
         <element name="PLN" positionX="-540" positionY="105" width="128" height="165"/>
-        <element name="Historypln" positionX="-272" positionY="60" width="128" height="193"/>
+        <element name="Historypln" positionX="-272" positionY="60" width="128" height="210"/>
         <element name="User" positionX="-63" positionY="-18" width="128" height="90"/>
         <element name="UserData" positionX="-63" positionY="9" width="128" height="105"/>
     </elements>

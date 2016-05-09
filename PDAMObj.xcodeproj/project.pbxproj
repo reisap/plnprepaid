@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6F25A0A1CE14A8A003D3DC9 /* Historypln+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F25A071CE14A8A003D3DC9 /* Historypln+CoreDataProperties.m */; };
+		A6F25A0B1CE14A8A003D3DC9 /* Historypln.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F25A091CE14A8A003D3DC9 /* Historypln.m */; };
+		A6F25A0E1CE14FD0003D3DC9 /* HistoryDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F25A0D1CE14FD0003D3DC9 /* HistoryDetail.m */; };
+		A6F25A101CE1508A003D3DC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6F25A0F1CE1508A003D3DC9 /* Main.storyboard */; };
 		A756FE521CCDEF6C00547C65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A756FE511CCDEF6C00547C65 /* main.m */; };
 		A756FE551CCDEF6C00547C65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A756FE541CCDEF6C00547C65 /* AppDelegate.m */; };
 		A756FE581CCDEF6C00547C65 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A756FE571CCDEF6C00547C65 /* ViewController.m */; };
-		A756FE5B1CCDEF6D00547C65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A756FE591CCDEF6D00547C65 /* Main.storyboard */; };
 		A756FE5D1CCDEF6D00547C65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A756FE5C1CCDEF6D00547C65 /* Assets.xcassets */; };
 		A756FE601CCDEF6D00547C65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A756FE5E1CCDEF6D00547C65 /* LaunchScreen.storyboard */; };
 		A771FF171CE0528D008A3C3A /* light-bulb.png in Resources */ = {isa = PBXBuildFile; fileRef = A771FF161CE0528D008A3C3A /* light-bulb.png */; };
@@ -85,13 +88,19 @@
 /* Begin PBXFileReference section */
 		4B15F260D648DB6D2BC28C9C /* Pods-PDAMObj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDAMObj.release.xcconfig"; path = "Pods/Target Support Files/Pods-PDAMObj/Pods-PDAMObj.release.xcconfig"; sourceTree = "<group>"; };
 		8F7B6F96E2BDDB1E5730C680 /* libPods-PDAMObj.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PDAMObj.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6F25A061CE14A8A003D3DC9 /* Historypln+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Historypln+CoreDataProperties.h"; sourceTree = "<group>"; };
+		A6F25A071CE14A8A003D3DC9 /* Historypln+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Historypln+CoreDataProperties.m"; sourceTree = "<group>"; };
+		A6F25A081CE14A8A003D3DC9 /* Historypln.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Historypln.h; sourceTree = "<group>"; };
+		A6F25A091CE14A8A003D3DC9 /* Historypln.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Historypln.m; sourceTree = "<group>"; };
+		A6F25A0C1CE14FD0003D3DC9 /* HistoryDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryDetail.h; sourceTree = "<group>"; };
+		A6F25A0D1CE14FD0003D3DC9 /* HistoryDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryDetail.m; sourceTree = "<group>"; };
+		A6F25A0F1CE1508A003D3DC9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A756FE4D1CCDEF6B00547C65 /* PDAMObj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDAMObj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A756FE511CCDEF6C00547C65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A756FE531CCDEF6C00547C65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A756FE541CCDEF6C00547C65 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A756FE561CCDEF6C00547C65 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A756FE571CCDEF6C00547C65 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A756FE5A1CCDEF6D00547C65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A756FE5C1CCDEF6D00547C65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A756FE5F1CCDEF6D00547C65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A756FE611CCDEF6D00547C65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -297,7 +306,9 @@
 				A79EF8281CD091DA00948CA1 /* WelcomeScreen.h */,
 				A79EF8291CD091DA00948CA1 /* WelcomeScreen.m */,
 				A79EF82A1CD091DA00948CA1 /* WelcomeScreen.xib */,
-				A756FE591CCDEF6D00547C65 /* Main.storyboard */,
+				A6F25A0C1CE14FD0003D3DC9 /* HistoryDetail.h */,
+				A6F25A0D1CE14FD0003D3DC9 /* HistoryDetail.m */,
+				A6F25A0F1CE1508A003D3DC9 /* Main.storyboard */,
 				A79B3A5B1CCF4C6F00B9E505 /* cell_user.h */,
 				A79B3A5C1CCF4C6F00B9E505 /* cell_user.m */,
 				A79B3A5D1CCF4C6F00B9E505 /* cell_user.xib */,
@@ -396,6 +407,10 @@
 				A79B3A4A1CCF1C2500B9E505 /* Core Data */,
 				A79310001CCDF57900DD9D85 /* KLCPopup */,
 				A79B3A4C1CCF1C6200B9E505 /* SaveUser.xcdatamodeld */,
+				A6F25A061CE14A8A003D3DC9 /* Historypln+CoreDataProperties.h */,
+				A6F25A071CE14A8A003D3DC9 /* Historypln+CoreDataProperties.m */,
+				A6F25A081CE14A8A003D3DC9 /* Historypln.h */,
+				A6F25A091CE14A8A003D3DC9 /* Historypln.m */,
 				A771FF2A1CE08DC2008A3C3A /* PLN+CoreDataProperties.h */,
 				A771FF2B1CE08DC2008A3C3A /* PLN+CoreDataProperties.m */,
 				A771FF2C1CE08DC2008A3C3A /* PLN.h */,
@@ -516,6 +531,7 @@
 				A79EF81B1CD0789600948CA1 /* 1461749591_water.png in Resources */,
 				A790BEDF1CD1CEF7004AB1EE /* cell_menu.xib in Resources */,
 				A790BEF41CD211F6004AB1EE /* 180.png in Resources */,
+				A6F25A101CE1508A003D3DC9 /* Main.storyboard in Resources */,
 				A771FF271CE06A20008A3C3A /* businessman-talking-about-data-analysis.png in Resources */,
 				A79EF8251CD084ED00948CA1 /* 1461752752_circle-add.png in Resources */,
 				A790BECE1CD1C0A4004AB1EE /* circle-menu.png in Resources */,
@@ -524,7 +540,6 @@
 				A79EF81D1CD07CD500948CA1 /* 1461750676_receipt-paid-paper.png in Resources */,
 				A79EF8211CD0835700948CA1 /* 1461752342_add_green.png in Resources */,
 				A771FF231CE0696E008A3C3A /* idea.png in Resources */,
-				A756FE5B1CCDEF6D00547C65 /* Main.storyboard in Resources */,
 				A790BED61CD1CDB2004AB1EE /* water-drop.png in Resources */,
 				A790BED41CD1C86D004AB1EE /* water-tap.png in Resources */,
 			);
@@ -577,12 +592,14 @@
 				A790BECB1CD1BB6A004AB1EE /* MenuKiri.m in Sources */,
 				A79B3A471CCF1B5F00B9E505 /* CoreDataManager.m in Sources */,
 				A79B3A491CCF1B5F00B9E505 /* NSManagedObject+Mappings.m in Sources */,
+				A6F25A0E1CE14FD0003D3DC9 /* HistoryDetail.m in Sources */,
 				A79B3A4E1CCF1C6200B9E505 /* SaveUser.xcdatamodeld in Sources */,
 				A771FF2F1CE08DC2008A3C3A /* PLN.m in Sources */,
 				A790BEC61CD1B86C004AB1EE /* JASidePanelController.m in Sources */,
 				A790BEC01CD1B857004AB1EE /* TGLGuillotineMenu.m in Sources */,
 				A79310121CCE032700DD9D85 /* DetailTagihan.m in Sources */,
 				A790BEF11CD1E167004AB1EE /* TentangPengembang.m in Sources */,
+				A6F25A0B1CE14A8A003D3DC9 /* Historypln.m in Sources */,
 				A790BEDE1CD1CEF7004AB1EE /* cell_menu.m in Sources */,
 				A790BEC71CD1B86C004AB1EE /* UIViewController+JASidePanel.m in Sources */,
 				A756FE551CCDEF6C00547C65 /* AppDelegate.m in Sources */,
@@ -593,6 +610,7 @@
 				A79B3A5A1CCF1D2600B9E505 /* User.m in Sources */,
 				A793100E1CCE00C900DD9D85 /* addDataUser.m in Sources */,
 				A79EF82B1CD091DA00948CA1 /* WelcomeScreen.m in Sources */,
+				A6F25A0A1CE14A8A003D3DC9 /* Historypln+CoreDataProperties.m in Sources */,
 				A797C5DF1CD346E700A1C4A3 /* ATAppUpdater.m in Sources */,
 				A79310031CCDF57900DD9D85 /* KLCPopup.m in Sources */,
 			);
@@ -601,14 +619,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A756FE591CCDEF6D00547C65 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A756FE5A1CCDEF6D00547C65 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A756FE5E1CCDEF6D00547C65 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

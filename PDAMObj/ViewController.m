@@ -21,6 +21,8 @@
 #import "JASidePanelController.h"
 #import "SVProgressHUD.h"
 #import "PLN.h"
+#import "HistoryDetail.h"
+
 
 @interface ViewController (){
     NSNumber *UserCount;
@@ -50,7 +52,7 @@
     
     self.navigationItem.titleView = imgView;
     
-    self.navigationController.navigationBar.topItem.title = @"Tagihan";
+    //self.navigationController.navigationBar.topItem.title = @"Back";
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:137.0/255.0 green:47.0/255.0 blue:64.0/255.0 alpha:1];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar
@@ -372,11 +374,11 @@
 //    NSString* input2 = [NSString stringWithFormat:@"%@",object.input2];
 //    NSLog(@"selected %ld row", (long)indexPath.row);
 //    
-//    NSString * storyboardName = @"Main";
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
-//    DetailTagihan * vc = [storyboard instantiateViewControllerWithIdentifier:@"DetailTagihan"];
-//    [vc getDataUserTagihan:input1 :input2 ];
-//    [self.navigationController pushViewController:vc animated:YES];
+    NSString * storyboardName = @"Main";
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+    HistoryDetail * vc = [storyboard instantiateViewControllerWithIdentifier:@"HistoryDetail"];
+   // [vc getDataUserTagihan:input1 :input2 ];
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 
