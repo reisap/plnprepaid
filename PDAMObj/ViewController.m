@@ -88,8 +88,8 @@
     self.tbl_data_user.estimatedRowHeight = 75.0 ;
     self.tbl_data_user.rowHeight = UITableViewAutomaticDimension;
     //sortedNotifikasi= [UserData MR_findAllSortedBy:@"timestamp" ascending:YES];
-    UserCount = [UserData MR_numberOfEntities];
-    sortedNotifikasi= [UserData MR_findAllSortedBy:@"timestamp" ascending:YES];
+    UserCount = [PLN MR_numberOfEntities];
+    sortedNotifikasi= [PLN MR_findAllSortedBy:@"timestamp" ascending:NO];
     [self.tbl_data_user reloadData];
     
    
@@ -181,8 +181,8 @@
 //    [CoreDataManager sharedManager].modelName = @"SaveUser";
 //    [CoreDataManager sharedManager].databaseName = @"SaveUser";
 //    [[CoreDataManager sharedManager] useInMemoryStore];
-     UserCount = [UserData MR_numberOfEntities];
-    NSArray *people = [UserData MR_findAllSortedBy:@"timestamp" ascending:YES];
+     UserCount = [PLN MR_numberOfEntities];
+    NSArray *people = [PLN MR_findAllSortedBy:@"timestamp" ascending:YES];
     NSLog(@"data user save = %@",people);
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(reloadTable:)
@@ -194,8 +194,8 @@
 - (void) reloadTable:(NSNotification *) notification
 {
    // [CoreDataManager sharedManager].modelName = @"SaveUser";
-   UserCount = [UserData MR_numberOfEntities];
-     sortedNotifikasi= [UserData MR_findAllSortedBy:@"timestamp" ascending:YES];
+   UserCount = [PLN MR_numberOfEntities];
+     sortedNotifikasi= [PLN MR_findAllSortedBy:@"timestamp" ascending:YES];
     [self.tbl_data_user reloadData];
     
 }
@@ -205,9 +205,9 @@
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete object from database
-        UserData *object = sortedNotifikasi[indexPath.section];
-        NSString* input1 = [NSString stringWithFormat:@"%@",object.input1] ;
-        NSLog(@"ini input 1 yang mau didelete = %@",input1);
+        PLN *object = sortedNotifikasi[indexPath.section];
+        //NSString* input1 = [NSString stringWithFormat:@"%@",object.input1] ;
+        //NSLog(@"ini input 1 yang mau didelete = %@",input1);
         [object MR_deleteEntity];
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         [self reloadTable:nil];
@@ -266,7 +266,7 @@
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    
+    //return 202.0f;
     return UITableViewAutomaticDimension;
     
 }
@@ -314,18 +314,18 @@
     }
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-   
-    return 77.0f;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//   
+//    return 77.0f;
+//}
 #pragma mark - UITableViewDataSource
 // number of section(s), now I assume there is only 1 section
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)theTableView
 {
     NSLog(@"ini data user = %@",UserCount);
     NSInteger value = [UserCount integerValue];
-    return 1;
+    return value;
 }
 
 // number of row in the section, I assume there is only 1 row
@@ -338,7 +338,7 @@
 - (UITableViewCell *)tableView:(UITableView *)theTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"cell_user";
-     //UserData *object = sortedNotifikasi[indexPath.section];
+     PLN *object = sortedNotifikasi[indexPath.section];
     
     // Similar to UITableViewCell, but
     cell_user *cell = (cell_user *)[theTableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -353,8 +353,11 @@
 //    [cell.layer setShadowOpacity:0.5];
     
     // Just want to test, so I hardcode the data
-//    cell.txt_judul.text = [NSString stringWithFormat:@"%@",object.judul];
-//    cell.txt_pelanggan.text = [NSString stringWithFormat:@"%@ - %@",object.input1, object.input2];
+    cell.txt_judul.text = [NSString stringWithFormat:@"%@",object.judul];
+    cell.txt_nama_perumahan.text = [NSString stringWithFormat:@"%@",object.nama];
+    cell.txt_pelanggan.text = [NSString stringWithFormat:@"%@",object.idpelanggan];
+    cell.txt_no_meter.text = [NSString stringWithFormat:@"%@",object.nomorkwh];
+    cell.txt_tarif.text = [NSString stringWithFormat:@"%@ / %@",object.tarif,object.daya];
     
       cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
@@ -364,16 +367,16 @@
 // when user tap the row, what action you want to perform
 - (void)tableView:(UITableView *)theTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UserData *object = sortedNotifikasi[indexPath.section];
-    NSString* input1 = [NSString stringWithFormat:@"%@",object.input1] ;
-    NSString* input2 = [NSString stringWithFormat:@"%@",object.input2];
-    NSLog(@"selected %ld row", (long)indexPath.row);
-    
-    NSString * storyboardName = @"Main";
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
-    DetailTagihan * vc = [storyboard instantiateViewControllerWithIdentifier:@"DetailTagihan"];
-    [vc getDataUserTagihan:input1 :input2 ];
-    [self.navigationController pushViewController:vc animated:YES];
+    PLN *object = sortedNotifikasi[indexPath.section];
+//    NSString* input1 = [NSString stringWithFormat:@"%@",object.input1] ;
+//    NSString* input2 = [NSString stringWithFormat:@"%@",object.input2];
+//    NSLog(@"selected %ld row", (long)indexPath.row);
+//    
+//    NSString * storyboardName = @"Main";
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+//    DetailTagihan * vc = [storyboard instantiateViewControllerWithIdentifier:@"DetailTagihan"];
+//    [vc getDataUserTagihan:input1 :input2 ];
+//    [self.navigationController pushViewController:vc animated:YES];
     
 }
 

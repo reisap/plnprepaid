@@ -18,6 +18,7 @@
 #import "DLRadioButton.h"
 #import "AFNetworking.h"
 #import "PLN.h"
+#import "SVProgressHUD.h"
 
 
 
@@ -126,7 +127,7 @@
 - (IBAction)act_submit:(id)sender {
     if(![[_txt_input1 text] isEqualToString:@""] && ![[_txt_judul text] isEqualToString:@""] && checkPilihan != -1){
         
-        NSLog(@"ini judul = %@", _txt_judul.text);
+        [SVProgressHUD showWithStatus:@""];
 
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             // time-consuming task
@@ -160,7 +161,7 @@
                       NSDictionary *responseDictUSer = responseObject;
                       // NSMutableArray* values =[[NSMutableArray alloc]init];
                       //values = [responseDictUSer objectForKey:@"rows"];
-                       NSDictionary* valuesHistory = [responseDictUSer objectForKey:@"HistoryPrepaid"];
+                      NSDictionary* valuesHistory = [responseDictUSer objectForKey:@"HistoryPrepaid"];
                       NSDictionary* values = [valuesHistory objectForKey:@"DataPelanggan"];
                       NSArray* valuesTransaksi = [valuesHistory objectForKey:@"TransaksiPrepaid"];
                       
@@ -184,7 +185,7 @@
                       isi.nama = Nama;
                       isi.nomorkwh = Nomorkwhku;
                       isi.tarif = Tarif;
-                      isi.judul = _txt_input1.text;
+                      isi.judul = _txt_judul.text;
                       isi.timestamp = [NSNumber numberWithInteger:[timestamp integerValue]];
               
                       //Save to persistant storage
@@ -219,7 +220,11 @@
                           }
                       }
                       
+                      [SVProgressHUD dismiss];
                       
+                      [[NSNotificationCenter defaultCenter]
+                       postNotificationName:@"sendUser"
+                       object:self];
                       [self.navigationController dismissCurrentPopinControllerAnimated:YES];
                       
                       [self dismissCurrentPopinControllerAnimated:YES completion:^{
@@ -228,11 +233,12 @@
 
                   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                       NSLog(@"Error: %@", error);
+                                            [SVProgressHUD dismiss];
                   }];
             
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                
+                                      [SVProgressHUD dismiss];
             });
         });
 
@@ -251,11 +257,8 @@
 //        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
 //        
 //        
-//        [[NSNotificationCenter defaultCenter]
-//         postNotificationName:@"sendUser"
-//         object:self];
-//        NSArray *people = [UserData all];
-//        NSLog(@"data user save = %@",people);
+        
+        
         
         
     }
@@ -266,6 +269,7 @@
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
         [alert show];
+                              [SVProgressHUD dismiss];
     }
     
 }

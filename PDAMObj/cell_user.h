@@ -11,5 +11,8 @@
 @interface cell_user : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *txt_judul;
 @property (weak, nonatomic) IBOutlet UILabel *txt_pelanggan;
+@property (weak, nonatomic) IBOutlet UILabel *txt_nama_perumahan;
+@property (weak, nonatomic) IBOutlet UILabel *txt_no_meter;
+@property (weak, nonatomic) IBOutlet UILabel *txt_tarif;
 
 @end
