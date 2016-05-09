@@ -4,11 +4,11 @@
         <attribute name="alamat" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="daya" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="idpelanggan" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="judul" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nama" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nomorkwh" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tarif" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timestamp" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <relationship name="history" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Historypln" inverseName="datapelanggan" inverseEntity="Historypln" syncable="YES"/>
     </entity>
     <entity name="Historypln" syncable="YES">
         <attribute name="daya" optional="YES" attributeType="String" syncable="YES"/>
@@ -17,11 +17,10 @@
         <attribute name="jenistransaksi" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="namabank" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pemkwh" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="rptoken" optional="YES" syncable="YES"/>
+        <attribute name="rptoken" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tglbayar" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timestamp" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="datapelanggan" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Datapelanggan" inverseName="history" inverseEntity="Datapelanggan" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="input1" optional="YES" attributeType="String" syncable="YES"/>
@@ -37,7 +36,7 @@
     <elements>
         <element name="User" positionX="-63" positionY="-18" width="128" height="90"/>
         <element name="UserData" positionX="-63" positionY="9" width="128" height="105"/>
-        <element name="Datapelanggan" positionX="-540" positionY="105" width="128" height="165"/>
-        <element name="Historypln" positionX="-272" positionY="60" width="128" height="208"/>
+        <element name="Datapelanggan" positionX="-540" positionY="105" width="128" height="163"/>
+        <element name="Historypln" positionX="-272" positionY="60" width="128" height="193"/>
     </elements>
 </model>

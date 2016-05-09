@@ -1,0 +1,15 @@
+/Volumes/Reisa/APPS TO PLAY/PLN/PDAMObj/Pods/EGYWebViewController/TUSafariActivity/Safari.png
+/Volumes/Reisa/APPS TO PLAY/PLN/PDAMObj/Pods/EGYWebViewController/TUSafariActivity/Safari@2x.png
+/Volumes/Reisa/APPS TO PLAY/PLN/PDAMObj/Pods/EGYWebViewController/TUSafariActivity/Safari@2x~ipad.png
+/Volumes/Reisa/APPS TO PLAY/PLN/PDAMObj/Pods/EGYWebViewController/TUSafariActivity/Safari~ipad.png
+/Volumes/Reisa/APPS TO PLAY/PLN/PDAMObj/Pods/EGYWebViewController/MLCruxActivity/MLCruxActivity.png
+/Volumes/Reisa/APPS TO PLAY/PLN/PDAMObj/Pods/EGYWebViewController/MLCruxActivity/MLCruxActivity@2x.png
+/Volumes/Reisa/APPS TO PLAY/PLN/PDAMObj/Pods/EGYWebViewController/MLCruxActivity/MLCruxActivity@2x~iPad.png
+/Volumes/Reisa/APPS TO PLAY/PLN/PDAMObj/Pods/EGYWebViewController/MLCruxActivity/MLCruxActivity~iPad.png
+/Volumes/Reisa/APPS TO PLAY/PLN/PDAMObj/Pods/EGYWebViewController/ARChromeActivity/ARChromeActivity.png
+/Volumes/Reisa/APPS TO PLAY/PLN/PDAMObj/Pods/EGYWebViewController/ARChromeActivity/ARChromeActivity@2x.png
+/Volumes/Reisa/APPS TO PLAY/PLN/PDAMObj/Pods/EGYWebViewController/ARChromeActivity/ARChromeActivity@2x~ipad.png
+/Volumes/Reisa/APPS TO PLAY/PLN/PDAMObj/Pods/EGYWebViewController/ARChromeActivity/ARChromeActivity~ipad.png
+/Volumes/Reisa/APPS TO PLAY/PLN/PDAMObj/Pods/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle
+/Volumes/Reisa/APPS TO PLAY/PLN/PDAMObj/Pods/REComposeViewController/REComposeViewController/REComposeViewController.bundle
+/Volumes/Reisa/APPS TO PLAY/PLN/PDAMObj/Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle

@@ -20,6 +20,8 @@
 		A771FF251CE0696E008A3C3A /* navigation-history-interface-symbol-of-a-clock-with-an-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A771FF221CE0696E008A3C3A /* navigation-history-interface-symbol-of-a-clock-with-an-arrow.png */; };
 		A771FF271CE06A20008A3C3A /* businessman-talking-about-data-analysis.png in Resources */ = {isa = PBXBuildFile; fileRef = A771FF261CE06A20008A3C3A /* businessman-talking-about-data-analysis.png */; };
 		A771FF291CE06B37008A3C3A /* light-bulbwhite.png in Resources */ = {isa = PBXBuildFile; fileRef = A771FF281CE06B37008A3C3A /* light-bulbwhite.png */; };
+		A771FF2E1CE08DC2008A3C3A /* PLN+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A771FF2B1CE08DC2008A3C3A /* PLN+CoreDataProperties.m */; };
+		A771FF2F1CE08DC2008A3C3A /* PLN.m in Sources */ = {isa = PBXBuildFile; fileRef = A771FF2D1CE08DC2008A3C3A /* PLN.m */; };
 		A790BEC01CD1B857004AB1EE /* TGLGuillotineMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A790BEBF1CD1B857004AB1EE /* TGLGuillotineMenu.m */; };
 		A790BEC61CD1B86C004AB1EE /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = A790BEC31CD1B86C004AB1EE /* JASidePanelController.m */; };
 		A790BEC71CD1B86C004AB1EE /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = A790BEC51CD1B86C004AB1EE /* UIViewController+JASidePanel.m */; };
@@ -101,6 +103,10 @@
 		A771FF221CE0696E008A3C3A /* navigation-history-interface-symbol-of-a-clock-with-an-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation-history-interface-symbol-of-a-clock-with-an-arrow.png"; sourceTree = "<group>"; };
 		A771FF261CE06A20008A3C3A /* businessman-talking-about-data-analysis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "businessman-talking-about-data-analysis.png"; sourceTree = "<group>"; };
 		A771FF281CE06B37008A3C3A /* light-bulbwhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "light-bulbwhite.png"; sourceTree = "<group>"; };
+		A771FF2A1CE08DC2008A3C3A /* PLN+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PLN+CoreDataProperties.h"; sourceTree = "<group>"; };
+		A771FF2B1CE08DC2008A3C3A /* PLN+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PLN+CoreDataProperties.m"; sourceTree = "<group>"; };
+		A771FF2C1CE08DC2008A3C3A /* PLN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLN.h; sourceTree = "<group>"; };
+		A771FF2D1CE08DC2008A3C3A /* PLN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLN.m; sourceTree = "<group>"; };
 		A790BEBE1CD1B857004AB1EE /* TGLGuillotineMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGLGuillotineMenu.h; sourceTree = "<group>"; };
 		A790BEBF1CD1B857004AB1EE /* TGLGuillotineMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGLGuillotineMenu.m; sourceTree = "<group>"; };
 		A790BEC21CD1B86C004AB1EE /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
@@ -390,6 +396,10 @@
 				A79B3A4A1CCF1C2500B9E505 /* Core Data */,
 				A79310001CCDF57900DD9D85 /* KLCPopup */,
 				A79B3A4C1CCF1C6200B9E505 /* SaveUser.xcdatamodeld */,
+				A771FF2A1CE08DC2008A3C3A /* PLN+CoreDataProperties.h */,
+				A771FF2B1CE08DC2008A3C3A /* PLN+CoreDataProperties.m */,
+				A771FF2C1CE08DC2008A3C3A /* PLN.h */,
+				A771FF2D1CE08DC2008A3C3A /* PLN.m */,
 				A79EF8121CD0612100948CA1 /* UserData+CoreDataProperties.h */,
 				A79EF8131CD0612100948CA1 /* UserData+CoreDataProperties.m */,
 				A79EF8141CD0612100948CA1 /* UserData.h */,
@@ -560,6 +570,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A771FF2E1CE08DC2008A3C3A /* PLN+CoreDataProperties.m in Sources */,
 				A79EF8161CD0612100948CA1 /* UserData+CoreDataProperties.m in Sources */,
 				A756FE581CCDEF6C00547C65 /* ViewController.m in Sources */,
 				A79EF8171CD0612100948CA1 /* UserData.m in Sources */,
@@ -567,6 +578,7 @@
 				A79B3A471CCF1B5F00B9E505 /* CoreDataManager.m in Sources */,
 				A79B3A491CCF1B5F00B9E505 /* NSManagedObject+Mappings.m in Sources */,
 				A79B3A4E1CCF1C6200B9E505 /* SaveUser.xcdatamodeld in Sources */,
+				A771FF2F1CE08DC2008A3C3A /* PLN.m in Sources */,
 				A790BEC61CD1B86C004AB1EE /* JASidePanelController.m in Sources */,
 				A790BEC01CD1B857004AB1EE /* TGLGuillotineMenu.m in Sources */,
 				A79310121CCE032700DD9D85 /* DetailTagihan.m in Sources */,

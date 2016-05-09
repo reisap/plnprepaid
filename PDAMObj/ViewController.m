@@ -20,6 +20,7 @@
 #import "UIViewController+JASidePanel.h"
 #import "JASidePanelController.h"
 #import "SVProgressHUD.h"
+#import "PLN.h"
 
 @interface ViewController (){
     NSNumber *UserCount;
@@ -324,7 +325,7 @@
 {
     NSLog(@"ini data user = %@",UserCount);
     NSInteger value = [UserCount integerValue];
-    return value;
+    return 1;
 }
 
 // number of row in the section, I assume there is only 1 row
@@ -337,7 +338,7 @@
 - (UITableViewCell *)tableView:(UITableView *)theTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"cell_user";
-     UserData *object = sortedNotifikasi[indexPath.section];
+     //UserData *object = sortedNotifikasi[indexPath.section];
     
     // Similar to UITableViewCell, but
     cell_user *cell = (cell_user *)[theTableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -352,8 +353,8 @@
 //    [cell.layer setShadowOpacity:0.5];
     
     // Just want to test, so I hardcode the data
-    cell.txt_judul.text = [NSString stringWithFormat:@"%@",object.judul];
-    cell.txt_pelanggan.text = [NSString stringWithFormat:@"%@ - %@",object.input1, object.input2];
+//    cell.txt_judul.text = [NSString stringWithFormat:@"%@",object.judul];
+//    cell.txt_pelanggan.text = [NSString stringWithFormat:@"%@ - %@",object.input1, object.input2];
     
       cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;

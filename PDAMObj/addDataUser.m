@@ -17,6 +17,7 @@
 #import "TNRadioButtonGroup.h"
 #import "DLRadioButton.h"
 #import "AFNetworking.h"
+#import "PLN.h"
 
 
 
@@ -175,6 +176,19 @@
                       
                       
                       NSLog(@"Idpel data Idpel= %@",Idpel);
+                      NSString * timestamp = [NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970] * 1000];
+                      PLN *isi = [PLN MR_createEntity];
+                      isi.alamat = Alamat;
+                      isi.daya = Daya;
+                      isi.idpelanggan = Idpel;
+                      isi.nama = Nama;
+                      isi.nomorkwh = Nomorkwhku;
+                      isi.tarif = Tarif;
+                      isi.judul = _txt_input1.text;
+                      isi.timestamp = [NSNumber numberWithInteger:[timestamp integerValue]];
+              
+                      //Save to persistant storage
+                      [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
                       
                       
                       int i =0;

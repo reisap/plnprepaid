@@ -19,8 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    UIImageView* imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 64, 64)];
-    imgView.image = [UIImage imageNamed:@"1461749591_water.png"];
+    UIImageView* imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 32, 32)];
+    imgView.image = [UIImage imageNamed:@"light-bulb.png"];
     [imgView setContentMode:UIViewContentModeScaleAspectFit];
     
     self.navigationItem.titleView = imgView;
