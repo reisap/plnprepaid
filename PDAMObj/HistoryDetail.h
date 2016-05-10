@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface HistoryDetail : UIViewController
-
+-(void)getTIme : (int)time : (NSString *)Nometer : (NSString*)idPelanggan;
 @end

@@ -1,0 +1,6 @@
+framework module REComposeViewController {
+  umbrella header "Pods-PDAMObj-REComposeViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module MaryPopin {
+  umbrella header "Pods-PDAMObj-MaryPopin-umbrella.h"
+
+  export *
+  module * { export * }
+}

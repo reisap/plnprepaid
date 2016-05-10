@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A97CB96CD816B8B186E9C85F"
-               BuildableName = "libPods-PDAMObj-EGYWebViewController.a"
+               BlueprintIdentifier = "DC93EFC818B4FCF8682F8B18"
+               BuildableName = "EGYWebViewController.framework"
                BlueprintName = "Pods-PDAMObj-EGYWebViewController"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

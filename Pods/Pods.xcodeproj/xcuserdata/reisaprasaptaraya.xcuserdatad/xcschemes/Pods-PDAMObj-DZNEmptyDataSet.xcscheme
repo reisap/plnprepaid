@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ABAFE1EC516E0D9309120FED"
-               BuildableName = "libPods-PDAMObj-DZNEmptyDataSet.a"
+               BlueprintIdentifier = "D20E3365E680EA1A329E08C0"
+               BuildableName = "DZNEmptyDataSet.framework"
                BlueprintName = "Pods-PDAMObj-DZNEmptyDataSet"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

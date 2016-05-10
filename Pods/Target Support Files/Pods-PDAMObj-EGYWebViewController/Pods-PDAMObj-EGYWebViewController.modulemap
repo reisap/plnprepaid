@@ -1,0 +1,6 @@
+framework module EGYWebViewController {
+  umbrella header "Pods-PDAMObj-EGYWebViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}

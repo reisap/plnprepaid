@@ -20,6 +20,7 @@
 #import "PLN.h"
 #import "SVProgressHUD.h"
 #import "Historypln.h"
+#import <KVNProgress/KVNProgress.h>
 
 
 
@@ -130,7 +131,7 @@
 - (IBAction)act_submit:(id)sender {
     if(![[_txt_input1 text] isEqualToString:@""] && ![[_txt_judul text] isEqualToString:@""] && checkPilihan != -1){
         
-        [SVProgressHUD showWithStatus:@""];
+        [KVNProgress show];
 
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             // time-consuming task
@@ -170,7 +171,7 @@
                       
                       NSLog(@"values data pelanggan= %@",values);
                       
-                      if(values != NULL){
+                      if(values != NULL && ![values[@"Nomorkwh"] isEqualToString:@""]){
                       //ini data pelanggannya
                       NSString *Alamat = [NSString stringWithFormat:@"%@",values[@"Alamat"]];
                       NSString *Daya = [NSString stringWithFormat:@"%@",values[@"Daya"]];
@@ -195,9 +196,9 @@
                       //Save to persistant storage
                       [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
                       i =0;
-                      if(valuesTransaksi != NULL && valuesTransaksi != Nil){
-                      //count = [valuesTransaksi count];
-                      }
+                      //if(valuesTransaksi != NULL && valuesTransaksi != Nil){
+                      count = [valuesTransaksi count];
+                      //}
                       
                       
                       
@@ -241,14 +242,21 @@
                               i++;
                           }
                       }
+                           [KVNProgress showSuccess];
+                          [[NSNotificationCenter defaultCenter]
+                           postNotificationName:@"sendUser"
+                           object:self];
                           
                       }
+                      else{
+                            [KVNProgress showError];
+                      }
                       
-                      [SVProgressHUD dismiss];
                       
-                      [[NSNotificationCenter defaultCenter]
-                       postNotificationName:@"sendUser"
-                       object:self];
+                      
+                    
+                      
+                      
                       [self.navigationController dismissCurrentPopinControllerAnimated:YES];
                       
                       [self dismissCurrentPopinControllerAnimated:YES completion:^{
@@ -257,12 +265,12 @@
 
                   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                       NSLog(@"Error: %@", error);
-                                            [SVProgressHUD dismiss];
+                                            [KVNProgress showError];
                   }];
             
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                                      [SVProgressHUD dismiss];
+                
             });
         });
 

@@ -11,6 +11,12 @@
 		A6F25A0B1CE14A8A003D3DC9 /* Historypln.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F25A091CE14A8A003D3DC9 /* Historypln.m */; };
 		A6F25A0E1CE14FD0003D3DC9 /* HistoryDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F25A0D1CE14FD0003D3DC9 /* HistoryDetail.m */; };
 		A6F25A101CE1508A003D3DC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6F25A0F1CE1508A003D3DC9 /* Main.storyboard */; };
+		A70EEA741CE191EC00011DAA /* cell_history.m in Sources */ = {isa = PBXBuildFile; fileRef = A70EEA721CE191EC00011DAA /* cell_history.m */; };
+		A70EEA751CE191EC00011DAA /* cell_history.xib in Resources */ = {isa = PBXBuildFile; fileRef = A70EEA731CE191EC00011DAA /* cell_history.xib */; };
+		A70EEA7A1CE19B0800011DAA /* light-bulb-503881_640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A70EEA761CE19B0800011DAA /* light-bulb-503881_640.jpg */; };
+		A70EEA7B1CE19B0800011DAA /* light-bulb-1358917_640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A70EEA771CE19B0800011DAA /* light-bulb-1358917_640.jpg */; };
+		A70EEA7C1CE19B0800011DAA /* strommast-380181_640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A70EEA781CE19B0800011DAA /* strommast-380181_640.jpg */; };
+		A70EEA7D1CE19B0800011DAA /* twilight-532720_640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A70EEA791CE19B0800011DAA /* twilight-532720_640.jpg */; };
 		A756FE521CCDEF6C00547C65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A756FE511CCDEF6C00547C65 /* main.m */; };
 		A756FE551CCDEF6C00547C65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A756FE541CCDEF6C00547C65 /* AppDelegate.m */; };
 		A756FE581CCDEF6C00547C65 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A756FE571CCDEF6C00547C65 /* ViewController.m */; };
@@ -82,12 +88,12 @@
 		A79EF82B1CD091DA00948CA1 /* WelcomeScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = A79EF8291CD091DA00948CA1 /* WelcomeScreen.m */; };
 		A79EF82C1CD091DA00948CA1 /* WelcomeScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A79EF82A1CD091DA00948CA1 /* WelcomeScreen.xib */; };
 		A79EF8381CD0AC9500948CA1 /* 1461762890_calendar-clock.png in Resources */ = {isa = PBXBuildFile; fileRef = A79EF8371CD0AC9500948CA1 /* 1461762890_calendar-clock.png */; };
-		C6FD47FD17ECE75048BC6007 /* libPods-PDAMObj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7B6F96E2BDDB1E5730C680 /* libPods-PDAMObj.a */; };
+		E57FE32A679BE9E726C6EE09 /* Pods_PDAMObj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 486F8B2DDC70E16F0A65131A /* Pods_PDAMObj.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		486F8B2DDC70E16F0A65131A /* Pods_PDAMObj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PDAMObj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B15F260D648DB6D2BC28C9C /* Pods-PDAMObj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDAMObj.release.xcconfig"; path = "Pods/Target Support Files/Pods-PDAMObj/Pods-PDAMObj.release.xcconfig"; sourceTree = "<group>"; };
-		8F7B6F96E2BDDB1E5730C680 /* libPods-PDAMObj.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PDAMObj.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F25A061CE14A8A003D3DC9 /* Historypln+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Historypln+CoreDataProperties.h"; sourceTree = "<group>"; };
 		A6F25A071CE14A8A003D3DC9 /* Historypln+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Historypln+CoreDataProperties.m"; sourceTree = "<group>"; };
 		A6F25A081CE14A8A003D3DC9 /* Historypln.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Historypln.h; sourceTree = "<group>"; };
@@ -95,6 +101,13 @@
 		A6F25A0C1CE14FD0003D3DC9 /* HistoryDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryDetail.h; sourceTree = "<group>"; };
 		A6F25A0D1CE14FD0003D3DC9 /* HistoryDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryDetail.m; sourceTree = "<group>"; };
 		A6F25A0F1CE1508A003D3DC9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A70EEA711CE191EC00011DAA /* cell_history.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cell_history.h; sourceTree = "<group>"; };
+		A70EEA721CE191EC00011DAA /* cell_history.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cell_history.m; sourceTree = "<group>"; };
+		A70EEA731CE191EC00011DAA /* cell_history.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cell_history.xib; sourceTree = "<group>"; };
+		A70EEA761CE19B0800011DAA /* light-bulb-503881_640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "light-bulb-503881_640.jpg"; sourceTree = "<group>"; };
+		A70EEA771CE19B0800011DAA /* light-bulb-1358917_640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "light-bulb-1358917_640.jpg"; sourceTree = "<group>"; };
+		A70EEA781CE19B0800011DAA /* strommast-380181_640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "strommast-380181_640.jpg"; sourceTree = "<group>"; };
+		A70EEA791CE19B0800011DAA /* twilight-532720_640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "twilight-532720_640.jpg"; sourceTree = "<group>"; };
 		A756FE4D1CCDEF6B00547C65 /* PDAMObj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDAMObj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A756FE511CCDEF6C00547C65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A756FE531CCDEF6C00547C65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -215,7 +228,7 @@
 				A79B3A631CCF5DDD00B9E505 /* libsqlite3.0.tbd in Frameworks */,
 				A79B3A611CCF5DD500B9E505 /* libsqlite3.tbd in Frameworks */,
 				A79310071CCDF65700DD9D85 /* UIKit.framework in Frameworks */,
-				C6FD47FD17ECE75048BC6007 /* libPods-PDAMObj.a in Frameworks */,
+				E57FE32A679BE9E726C6EE09 /* Pods_PDAMObj.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +251,7 @@
 				A79B3A601CCF5DD500B9E505 /* libsqlite3.tbd */,
 				A79310061CCDF65700DD9D85 /* UIKit.framework */,
 				A79310041CCDF5AF00DD9D85 /* QuartzCore.framework */,
-				8F7B6F96E2BDDB1E5730C680 /* libPods-PDAMObj.a */,
+				486F8B2DDC70E16F0A65131A /* Pods_PDAMObj.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -289,6 +302,10 @@
 				A771FF221CE0696E008A3C3A /* navigation-history-interface-symbol-of-a-clock-with-an-arrow.png */,
 				A771FF261CE06A20008A3C3A /* businessman-talking-about-data-analysis.png */,
 				A771FF281CE06B37008A3C3A /* light-bulbwhite.png */,
+				A70EEA761CE19B0800011DAA /* light-bulb-503881_640.jpg */,
+				A70EEA771CE19B0800011DAA /* light-bulb-1358917_640.jpg */,
+				A70EEA781CE19B0800011DAA /* strommast-380181_640.jpg */,
+				A70EEA791CE19B0800011DAA /* twilight-532720_640.jpg */,
 				A79B3A4B1CCF1C2F00B9E505 /* Library */,
 				A756FE531CCDEF6C00547C65 /* AppDelegate.h */,
 				A756FE541CCDEF6C00547C65 /* AppDelegate.m */,
@@ -303,6 +320,9 @@
 				A793100D1CCE00C900DD9D85 /* addDataUser.xib */,
 				A756FE561CCDEF6C00547C65 /* ViewController.h */,
 				A756FE571CCDEF6C00547C65 /* ViewController.m */,
+				A70EEA711CE191EC00011DAA /* cell_history.h */,
+				A70EEA721CE191EC00011DAA /* cell_history.m */,
+				A70EEA731CE191EC00011DAA /* cell_history.xib */,
 				A79EF8281CD091DA00948CA1 /* WelcomeScreen.h */,
 				A79EF8291CD091DA00948CA1 /* WelcomeScreen.m */,
 				A79EF82A1CD091DA00948CA1 /* WelcomeScreen.xib */,
@@ -515,9 +535,12 @@
 				A79EF8191CD0765D00948CA1 /* icon_dropbox@2x.png in Resources */,
 				A79B3A5F1CCF4C6F00B9E505 /* cell_user.xib in Resources */,
 				A79EF8231CD0845F00948CA1 /* 1461752613_add_blue.png in Resources */,
+				A70EEA7B1CE19B0800011DAA /* light-bulb-1358917_640.jpg in Resources */,
 				A797C5DA1CD345B800A1C4A3 /* iRate.bundle in Resources */,
 				A79EF81F1CD07D1F00948CA1 /* 1461750753_cash-money-wallet.png in Resources */,
 				A771FF171CE0528D008A3C3A /* light-bulb.png in Resources */,
+				A70EEA7C1CE19B0800011DAA /* strommast-380181_640.jpg in Resources */,
+				A70EEA7A1CE19B0800011DAA /* light-bulb-503881_640.jpg in Resources */,
 				A771FF241CE0696E008A3C3A /* navigation-history-interface-symbol-of-a-clock-with-an-arrow (1).png in Resources */,
 				A790BED21CD1C46E004AB1EE /* user1.png in Resources */,
 				A756FE601CCDEF6D00547C65 /* LaunchScreen.storyboard in Resources */,
@@ -529,9 +552,11 @@
 				A771FF291CE06B37008A3C3A /* light-bulbwhite.png in Resources */,
 				A79EF8381CD0AC9500948CA1 /* 1461762890_calendar-clock.png in Resources */,
 				A771FF251CE0696E008A3C3A /* navigation-history-interface-symbol-of-a-clock-with-an-arrow.png in Resources */,
+				A70EEA751CE191EC00011DAA /* cell_history.xib in Resources */,
 				A79EF81B1CD0789600948CA1 /* 1461749591_water.png in Resources */,
 				A790BEDF1CD1CEF7004AB1EE /* cell_menu.xib in Resources */,
 				A790BEF41CD211F6004AB1EE /* 180.png in Resources */,
+				A70EEA7D1CE19B0800011DAA /* twilight-532720_640.jpg in Resources */,
 				A6F25A101CE1508A003D3DC9 /* Main.storyboard in Resources */,
 				A771FF271CE06A20008A3C3A /* businessman-talking-about-data-analysis.png in Resources */,
 				A79EF8251CD084ED00948CA1 /* 1461752752_circle-add.png in Resources */,
@@ -607,6 +632,7 @@
 				A79EF8171CD0612100948CA1 /* UserData.m in Sources */,
 				A790BECB1CD1BB6A004AB1EE /* MenuKiri.m in Sources */,
 				A79B3A471CCF1B5F00B9E505 /* CoreDataManager.m in Sources */,
+				A70EEA741CE191EC00011DAA /* cell_history.m in Sources */,
 				A79B3A491CCF1B5F00B9E505 /* NSManagedObject+Mappings.m in Sources */,
 				A6F25A0E1CE14FD0003D3DC9 /* HistoryDetail.m in Sources */,
 				A79B3A4E1CCF1C6200B9E505 /* SaveUser.xcdatamodeld in Sources */,

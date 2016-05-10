@@ -1,5 +1,6 @@
 # Uncomment this line to define a global platform for your project
 # platform :ios, '6.0'
+use_frameworks!
 
 target 'PDAMObj' do
 pod 'AFNetworking', '~> 2.5.4'
@@ -17,6 +18,7 @@ pod 'REComposeViewController'
 pod 'TNRadioButtonGroup'
 pod 'DLRadioButton', '~> 1.4'
 pod 'FontAwesomeIconFactory'
+pod 'KVNProgress'
 
 
 end

@@ -197,7 +197,7 @@
 {
    // [CoreDataManager sharedManager].modelName = @"SaveUser";
    UserCount = [PLN MR_numberOfEntities];
-     sortedNotifikasi= [PLN MR_findAllSortedBy:@"timestamp" ascending:YES];
+     sortedNotifikasi= [PLN MR_findAllSortedBy:@"timestamp" ascending:NO];
     [self.tbl_data_user reloadData];
     
 }
@@ -370,14 +370,15 @@
 - (void)tableView:(UITableView *)theTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     PLN *object = sortedNotifikasi[indexPath.section];
-//    NSString* input1 = [NSString stringWithFormat:@"%@",object.input1] ;
-//    NSString* input2 = [NSString stringWithFormat:@"%@",object.input2];
+    NSString* nometer = [NSString stringWithFormat:@"%@",object.nomorkwh] ;
+    NSString* idpelanggan = [NSString stringWithFormat:@"%@",object.idpelanggan];
+    int time = [object.timestamp intValue];
 //    NSLog(@"selected %ld row", (long)indexPath.row);
 //    
     NSString * storyboardName = @"Main";
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
     HistoryDetail * vc = [storyboard instantiateViewControllerWithIdentifier:@"HistoryDetail"];
-   // [vc getDataUserTagihan:input1 :input2 ];
+    [vc getTIme : time : nometer :idpelanggan];
     [self.navigationController pushViewController:vc animated:YES];
     
 }

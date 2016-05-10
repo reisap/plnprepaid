@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1014253704EFF807C5FD8DBD"
-               BuildableName = "libPods-PDAMObj-CarbonKit.a"
+               BlueprintIdentifier = "46113018279FD191D45DEFC3"
+               BuildableName = "CarbonKit.framework"
                BlueprintName = "Pods-PDAMObj-CarbonKit"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

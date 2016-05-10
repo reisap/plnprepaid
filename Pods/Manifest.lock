@@ -35,6 +35,7 @@ PODS:
   - FontAwesomeIconFactory (2.1.1)
   - IQKeyboardManager (4.0.2)
   - KNSemiModalViewController_hons82 (0.4.4)
+  - KVNProgress (2.2.4)
   - MagicalRecord/CocoaLumberjack (2.3.2):
     - CocoaLumberjack (~> 2.0)
     - MagicalRecord/Core
@@ -56,6 +57,7 @@ DEPENDENCIES:
   - EGYWebViewController
   - FontAwesomeIconFactory
   - IQKeyboardManager
+  - KVNProgress
   - MagicalRecord/CocoaLumberjack
   - MaryPopin
   - ObjectiveSugar
@@ -75,6 +77,7 @@ SPEC CHECKSUMS:
   FontAwesomeIconFactory: bb9ce26d3dd13044854a82d380023c8e7d3ebf1a
   IQKeyboardManager: 2341089c4ae25fa2fa82ce356a259fcd267dc6b6
   KNSemiModalViewController_hons82: 22aead5ef5d8ca749bc1babb43fa7d6f14b030a3
+  KVNProgress: 541edcea5a1fef592aceac8d791a410d38cb499d
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   MaryPopin: 24affc7fab9608dcad88279e32e774e5de5d54ac
   ObjectiveSugar: a6a25f23d657c19df0a0b972466d5b5ca9f5295c
@@ -84,4 +87,4 @@ SPEC CHECKSUMS:
   THCalendarDatePicker: a3c3bea65eaf0fdd7044ff5d4886056dc72164fd
   TNRadioButtonGroup: f5fb9b545d8913bbabe6a72ea1fa6fba4d833bb6
 
-COCOAPODS: 0.39.0
+COCOAPODS: 0.37.2
