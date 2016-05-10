@@ -30,7 +30,7 @@
     //set the bundle ID. normally you wouldn't need to do this
     //as it is picked up automatically from your Info.plist file
     //but we want to test with an app that's actually on the store
-    [iRate sharedInstance].applicationBundleID = @"com.reisap.pdam";
+    [iRate sharedInstance].applicationBundleID = @"com.reisap.pln";
     [iRate sharedInstance].onlyPromptIfLatestVersion = NO;
     
     //enable preview mode
