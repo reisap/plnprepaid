@@ -213,13 +213,26 @@
         //NSLog(@"ini input 1 yang mau didelete = %@",input1);
         
         //id varTIme = [NSNumber numberWithInteger: timestamp];
-        NSArray* dataHistory= [Historypln MR_findByAttribute:@"nomorkwh" withValue:object.nomorkwh andOrderBy:@"nomorkwh" ascending:NO];
-        Historypln *dataToDelete = dataHistory[indexPath.section];
+        //NSArray* dataHistory= [Historypln MR_findByAttribute:@"nomorkwh" withValue:object.nomorkwh andOrderBy:@"nomorkwh" ascending:NO];
+        //Historypln *dataToDelete = dataHistory[indexPath.section];
         
-        [dataToDelete MR_deleteEntity];
+        //[dataToDelete MR_deleteEntity];
         [object MR_deleteEntity];
         
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+        
+        NSArray* dataHistory= [Historypln MR_findByAttribute:@"nomorkwh" withValue:object.nomorkwh andOrderBy:@"nomorkwh" ascending:NO];
+        int x = 0;
+        int countDA = [dataHistory count];
+        while (x < countDA){
+            Historypln *dataToDelete = dataHistory[x];
+            
+            [dataToDelete MR_deleteEntity];
+            
+            
+            [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+            x++;
+        }
         
         
         [self reloadTable:nil];

@@ -15,4 +15,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *rupiah;
 @property (weak, nonatomic) IBOutlet UILabel *daya;
 @property (weak, nonatomic) IBOutlet UILabel *nama_bank;
+@property (weak, nonatomic) IBOutlet UILabel *tgl_bayar;
 @end

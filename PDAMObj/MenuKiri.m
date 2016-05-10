@@ -174,7 +174,7 @@
 //        NSString *textToShare = @"Look at this awesome website for aspiring iOS Developers!";
 //        NSURL *myWebsite = [NSURL URLWithString:@"http://www.codingexplorer.com/"];
         
-        NSArray *objectsToShare = @[@"I'm use resulties on Apple Store - Membantu dalam melihat tagihan PDAM Kota Bogor", @"PDAM TIRTA PAKUAN KOTA BOGOR"];
+        NSArray *objectsToShare = @[@"I'm use Electricity on Apple Store - Membantu dalam melihat pemakaian PLN Prepaid ", @"I'm use Electricity on Apple Store - Membantu dalam melihat pemakaian PLN Prepaid"];
         
         UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
         

@@ -320,6 +320,7 @@
     cell.rupiah.text = [NSString stringWithFormat:@"%@",object.rptoken];
     cell.daya.text = [NSString stringWithFormat:@"%@",object.daya];
     cell.nama_bank.text = [NSString stringWithFormat:@"%@",object.namabank];
+    cell.tgl_bayar.text = [NSString stringWithFormat:@"%@ %@",object.tglbayar,object.jambayar];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
