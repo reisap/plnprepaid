@@ -378,8 +378,10 @@
     NSString * storyboardName = @"Main";
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
     HistoryDetail * vc = [storyboard instantiateViewControllerWithIdentifier:@"HistoryDetail"];
-    [vc getTIme : time : nometer :idpelanggan];
+  
+   
     [self.navigationController pushViewController:vc animated:YES];
+     [vc getTIme : time : nometer :idpelanggan];
     
 }
 

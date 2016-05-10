@@ -25,13 +25,19 @@
 #import "HistoryDetail.h"
 #import "Historypln.h"
 #import "cell_history.h"
+#import <UIKit/UIView.h>
 
 @interface HistoryDetail (){
+    NSString *no_meter,*pelanggan_id;
+    NSNumber *UserCount;
+    NSArray *sortedNotifikasi;
     int timestamp;
-    __weak IBOutlet UILabel *txt_nometer;
+   
 }
+
 @property (weak, nonatomic) IBOutlet UITableView *tbl_history;
 @property (weak, nonatomic) IBOutlet UILabel *txt_nometer;
+@property (weak, nonatomic) IBOutlet UILabel *judul_meter;
 
 @end
 
@@ -40,7 +46,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    txt_nometer.text = @"aaa";
+    NSString* gantiData = [NSString stringWithFormat:@"%@ / %@",no_meter,pelanggan_id];
+    [txt_nometer setText:gantiData];
+    NSLog(@"ini dia timestampnya = %d",timestamp);
+    //NSPredicate *peopleFilter = [NSPredicate predicateWithFormat:@"timestamp IN %d", timestamp];
+      //NSLog(@"ini dia peopleFilter = %d",peopleFilter);
+   // UserCount = [Historypln MR_numberOfEntitiesWithPredicate:peopleFilter];
+    id varTIme = [NSNumber numberWithInteger: timestamp];
+    sortedNotifikasi= [Historypln MR_findByAttribute:@"timestamp" withValue:varTIme andOrderBy:@"timestamp" ascending:NO];
+    NSLog(@"ini umlah data sortedNotifikasi = %@",sortedNotifikasi);
     // Do any additional setup after loading the view.
 }
 
@@ -52,12 +66,16 @@
 -(void)getTIme : (int)time : (NSString *)Nometer : (NSString*)idPelanggan{
     NSLog(@"ini text = %@",Nometer);
     timestamp = time;
-    [self setnometer];
+    no_meter = Nometer;
+    pelanggan_id = idPelanggan;
+    self.txt_nometer.text= @"aasasasa";
+    
     //txt_nometer.text = [NSString stringWithFormat:@"%@ / %@",Nometer,idPelanggan];
 }
 
 -(void)setnometer{
      txt_nometer.text = @"bbbbb";
+     [txt_nometer setNeedsDisplay];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -117,8 +135,8 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)theTableView
 {
 //    NSLog(@"ini data user = %@",UserCount);
-//    NSInteger value = [UserCount integerValue];
-    return 2;
+    //NSInteger value = [UserCount integerValue];
+    return [sortedNotifikasi count];
 }
 
 // number of row in the section, I assume there is only 1 row
@@ -131,7 +149,7 @@
 - (UITableViewCell *)tableView:(UITableView *)theTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"cell_history";
-   // Historypln *object = sortedNotifikasi[indexPath.section];
+    Historypln *object = sortedNotifikasi[indexPath.section];
     
     // Similar to UITableViewCell, but
     cell_history *cell = (cell_history *)[theTableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -146,7 +164,11 @@
     //    [cell.layer setShadowOpacity:0.5];
     
     // Just want to test, so I hardcode the data
-   
+    cell.isi_token.text = [NSString stringWithFormat:@"%@",object.token];
+    cell.pemkwh.text = [NSString stringWithFormat:@"%@",object.pemkwh];
+    cell.rupiah.text = [NSString stringWithFormat:@"%@",object.rptoken];
+    cell.daya.text = [NSString stringWithFormat:@"%@",object.daya];
+    cell.nama_bank.text = [NSString stringWithFormat:@"%@",object.namabank];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
