@@ -57,6 +57,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+    //self.navigationItem.title = @"Back";
     UIImage* image3a = [UIImage imageNamed:@"reload.png"];
     CGRect frameimga = CGRectMake(0, 0, 32, 32);
     UIButton *someButtona = [[UIButton alloc] initWithFrame:frameimga];
