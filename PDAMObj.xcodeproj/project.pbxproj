@@ -17,6 +17,7 @@
 		A70EEA7B1CE19B0800011DAA /* light-bulb-1358917_640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A70EEA771CE19B0800011DAA /* light-bulb-1358917_640.jpg */; };
 		A70EEA7C1CE19B0800011DAA /* strommast-380181_640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A70EEA781CE19B0800011DAA /* strommast-380181_640.jpg */; };
 		A70EEA7D1CE19B0800011DAA /* twilight-532720_640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A70EEA791CE19B0800011DAA /* twilight-532720_640.jpg */; };
+		A70EEA7F1CE1D5E800011DAA /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = A70EEA7E1CE1D5E700011DAA /* reload.png */; };
 		A756FE521CCDEF6C00547C65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A756FE511CCDEF6C00547C65 /* main.m */; };
 		A756FE551CCDEF6C00547C65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A756FE541CCDEF6C00547C65 /* AppDelegate.m */; };
 		A756FE581CCDEF6C00547C65 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A756FE571CCDEF6C00547C65 /* ViewController.m */; };
@@ -108,6 +109,7 @@
 		A70EEA771CE19B0800011DAA /* light-bulb-1358917_640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "light-bulb-1358917_640.jpg"; sourceTree = "<group>"; };
 		A70EEA781CE19B0800011DAA /* strommast-380181_640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "strommast-380181_640.jpg"; sourceTree = "<group>"; };
 		A70EEA791CE19B0800011DAA /* twilight-532720_640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "twilight-532720_640.jpg"; sourceTree = "<group>"; };
+		A70EEA7E1CE1D5E700011DAA /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload.png; sourceTree = "<group>"; };
 		A756FE4D1CCDEF6B00547C65 /* PDAMObj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDAMObj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A756FE511CCDEF6C00547C65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A756FE531CCDEF6C00547C65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				A70EEA771CE19B0800011DAA /* light-bulb-1358917_640.jpg */,
 				A70EEA781CE19B0800011DAA /* strommast-380181_640.jpg */,
 				A70EEA791CE19B0800011DAA /* twilight-532720_640.jpg */,
+				A70EEA7E1CE1D5E700011DAA /* reload.png */,
 				A79B3A4B1CCF1C2F00B9E505 /* Library */,
 				A756FE531CCDEF6C00547C65 /* AppDelegate.h */,
 				A756FE541CCDEF6C00547C65 /* AppDelegate.m */,
@@ -533,6 +536,7 @@
 				A790BECC1CD1BB6A004AB1EE /* MenuKiri.xib in Resources */,
 				A771FF191CE05743008A3C3A /* light-bulb64.png in Resources */,
 				A79EF8191CD0765D00948CA1 /* icon_dropbox@2x.png in Resources */,
+				A70EEA7F1CE1D5E800011DAA /* reload.png in Resources */,
 				A79B3A5F1CCF4C6F00B9E505 /* cell_user.xib in Resources */,
 				A79EF8231CD0845F00948CA1 /* 1461752613_add_blue.png in Resources */,
 				A70EEA7B1CE19B0800011DAA /* light-bulb-1358917_640.jpg in Resources */,

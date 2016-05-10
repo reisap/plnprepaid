@@ -170,8 +170,9 @@
                       NSArray* valuesTransaksi = [valuesHistory objectForKey:@"TransaksiPrepaid"];
                       
                       NSLog(@"values data pelanggan= %@",values);
+                      NSArray* cekNotif= [PLN MR_findByAttribute:@"nomorkwh" withValue:values[@"Nomorkwh"] andOrderBy:@"nomorkwh" ascending:NO];
                       
-                      if(values != NULL && ![values[@"Nomorkwh"] isEqualToString:@""]){
+                      if(values != NULL && ![values[@"Nomorkwh"] isEqualToString:@""] && [cekNotif count] == 0){
                       //ini data pelanggannya
                       NSString *Alamat = [NSString stringWithFormat:@"%@",values[@"Alamat"]];
                       NSString *Daya = [NSString stringWithFormat:@"%@",values[@"Daya"]];
@@ -249,6 +250,13 @@
                           
                       }
                       else{
+                          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning"
+                                                                          message:@"Maaf No Meter/ ID Pelanggan yang Anda masukan sudah ada atau tidak valid !"
+                                                                         delegate:nil
+                                                                cancelButtonTitle:@"OK"
+                                                                otherButtonTitles:nil];
+                          [alert show];
+
                             [KVNProgress showError];
                       }
                       

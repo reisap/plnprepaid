@@ -22,6 +22,7 @@
 #import "SVProgressHUD.h"
 #import "PLN.h"
 #import "HistoryDetail.h"
+#import "Historypln.h"
 
 
 @interface ViewController (){
@@ -210,8 +211,17 @@
         PLN *object = sortedNotifikasi[indexPath.section];
         //NSString* input1 = [NSString stringWithFormat:@"%@",object.input1] ;
         //NSLog(@"ini input 1 yang mau didelete = %@",input1);
+        
+        //id varTIme = [NSNumber numberWithInteger: timestamp];
+        NSArray* dataHistory= [Historypln MR_findByAttribute:@"nomorkwh" withValue:object.nomorkwh andOrderBy:@"nomorkwh" ascending:NO];
+        Historypln *dataToDelete = dataHistory[indexPath.section];
+        
+        [dataToDelete MR_deleteEntity];
         [object MR_deleteEntity];
+        
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+        
+        
         [self reloadTable:nil];
     }
 }
@@ -378,10 +388,10 @@
     NSString * storyboardName = @"Main";
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
     HistoryDetail * vc = [storyboard instantiateViewControllerWithIdentifier:@"HistoryDetail"];
-  
+    int sectionNum = indexPath.section;
    
     [self.navigationController pushViewController:vc animated:YES];
-     [vc getTIme : time : nometer :idpelanggan];
+    [vc getTIme :sectionNum : time : nometer :idpelanggan];
     
 }
 

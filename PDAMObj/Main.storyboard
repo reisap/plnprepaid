@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--HIstory PLN Prepaid-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -39,7 +39,7 @@
                             <constraint firstItem="HBv-0r-XMg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yAC-E9-jKE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="l4w-ji-EBo">
+                    <navigationItem key="navigationItem" title="HIstory PLN Prepaid" id="l4w-ji-EBo">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="pWg-zN-kSZ">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>

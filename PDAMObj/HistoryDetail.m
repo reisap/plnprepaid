@@ -26,12 +26,22 @@
 #import "Historypln.h"
 #import "cell_history.h"
 #import <UIKit/UIView.h>
+#import <MagicalRecord/MagicalRecord.h>
+#import "TNRadioButtonGroup.h"
+#import "DLRadioButton.h"
+#import "AFNetworking.h"
+#import "PLN.h"
+#import "SVProgressHUD.h"
+#import "Historypln.h"
+#import <KVNProgress/KVNProgress.h>
 
 @interface HistoryDetail (){
     NSString *no_meter,*pelanggan_id;
     NSNumber *UserCount;
     NSArray *sortedNotifikasi;
     int timestamp;
+    int urutanNum;
+    int i,count;
    
 }
 
@@ -46,6 +56,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+    UIImage* image3a = [UIImage imageNamed:@"reload.png"];
+    CGRect frameimga = CGRectMake(0, 0, 32, 32);
+    UIButton *someButtona = [[UIButton alloc] initWithFrame:frameimga];
+    [someButtona setBackgroundImage:image3a forState:UIControlStateNormal];
+    [someButtona addTarget:self action:@selector(refreshData) forControlEvents:UIControlEventTouchUpInside];
+    [someButtona setShowsTouchWhenHighlighted:YES];
+    
+    UIBarButtonItem *mailbuttona =[[UIBarButtonItem alloc] initWithCustomView:someButtona];
+    self.navigationItem.rightBarButtonItem=mailbuttona;
     NSString* gantiData = [NSString stringWithFormat:@"%@ / %@",no_meter,pelanggan_id];
     [txt_nometer setText:gantiData];
     NSLog(@"ini dia timestampnya = %d",timestamp);
@@ -63,19 +83,149 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)getTIme : (int)time : (NSString *)Nometer : (NSString*)idPelanggan{
+-(void)refreshData{
+     [KVNProgress show];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // time-consuming task
+        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+        AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
+        
+        [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+        manager.requestSerializer = requestSerializer;
+        NSDictionary *params;
+       
+            
+            params = @{@"nomormeter": no_meter
+                       };
+       
+        
+        
+        
+        [manager GET:@"http://103.28.22.227:5277/v1/prepaid"
+          parameters:params
+             success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                 // NSString* encodedString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+                 
+                 NSLog(@"responseObject = %@", responseObject);
+                 
+                 NSDictionary *responseDictUSer = responseObject;
+                 // NSMutableArray* values =[[NSMutableArray alloc]init];
+                 //values = [responseDictUSer objectForKey:@"rows"];
+                 NSDictionary* valuesHistory = [responseDictUSer objectForKey:@"HistoryPrepaid"];
+                 NSDictionary* values = [valuesHistory objectForKey:@"DataPelanggan"];
+                 NSArray* valuesTransaksi = [valuesHistory objectForKey:@"TransaksiPrepaid"];
+                 
+                 NSLog(@"values data pelanggan= %@",values);
+                 NSArray* cekNotif= [PLN MR_findByAttribute:@"nomorkwh" withValue:values[@"Nomorkwh"] andOrderBy:@"nomorkwh" ascending:NO];
+                 
+                 if(values != NULL && ![values[@"Nomorkwh"] isEqualToString:@""] && [cekNotif count] == 1){
+                   
+                     
+                     NSArray* dataHistory= [Historypln MR_findByAttribute:@"nomorkwh" withValue:no_meter andOrderBy:@"nomorkwh" ascending:NO];
+                     int x = 0;
+                     int countDA = [dataHistory count];
+                     while (x < countDA){
+                     Historypln *dataToDelete = dataHistory[x];
+                     
+                     [dataToDelete MR_deleteEntity];
+                    
+                     
+                     [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+                         x++;
+                     }
+
+                     i =0;
+                     //if(valuesTransaksi != NULL && valuesTransaksi != Nil){
+                     count = [valuesTransaksi count];
+                     //}
+                     
+                     
+                     
+                     
+                     
+                     //akomodir carii default
+                     
+                     if(count != 0){
+                         while (i < count){
+                             
+                             Historypln *isi = [Historypln MR_createEntity];
+                             NSMutableDictionary* dataName = [valuesTransaksi objectAtIndex:i];
+                             NSString* Daya = [dataName  objectForKey:@"Daya"];
+                             NSString* Jambayar = [dataName  objectForKey:@"Jambayar"];
+                             NSString* Jenis_transaksi = [dataName  objectForKey:@"Jenis_transaksi"];
+                             NSString* Namabank = [dataName  objectForKey:@"Namabank"];
+                             NSString* Nomorkwh = [dataName  objectForKey:@"Nomorkwh"];
+                             NSString* Pemkwh = [dataName  objectForKey:@"Pemkwh"];
+                             NSString* Rptoken = [dataName  objectForKey:@"Rptoken"];
+                             NSString* Tglbayar = [dataName  objectForKey:@"Tglbayar"];
+                             NSString* Tgltransaksi = [dataName  objectForKey:@"Tgltransaksi"];
+                             NSString* Token = [dataName  objectForKey:@"Token"];
+                             
+                             isi.daya=Daya;
+                             isi.jambayar=Jambayar;
+                             isi.jenistransaksi=Jenis_transaksi;
+                             isi.namabank=Namabank;
+                             isi.nomorkwh=Nomorkwh;
+                             isi.pemkwh=Pemkwh;
+                             isi.rptoken=Rptoken;
+                             isi.tglbayar=Tglbayar;
+                             isi.tgltransaksi=Tgltransaksi;
+                             isi.token=Token;
+                             isi.timestamp = [NSNumber numberWithInteger:timestamp];
+                             [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+                             
+                             
+                             NSLog(@"ini no token saya = %@",Token);
+                             
+                             
+                             i++;
+                         }
+                     }
+                     [KVNProgress showSuccess];
+                     id varTIme = [NSNumber numberWithInteger: timestamp];
+                     sortedNotifikasi= [Historypln MR_findByAttribute:@"timestamp" withValue:varTIme andOrderBy:@"timestamp" ascending:NO];
+                     [tbl_history reloadData];
+                     
+                 }
+                 else{
+                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning"
+                                                                     message:@"Maaf No Meter/ ID Pelanggan yang Anda masukan sudah ada atau tidak valid !"
+                                                                    delegate:nil
+                                                           cancelButtonTitle:@"OK"
+                                                           otherButtonTitles:nil];
+                     [alert show];
+                     
+                     [KVNProgress showError];
+                 }
+                 
+                 
+                 
+                 
+                               
+             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                 NSLog(@"Error: %@", error);
+                 [KVNProgress showError];
+             }];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+//            id varTIme = [NSNumber numberWithInteger: timestamp];
+//            sortedNotifikasi= [Historypln MR_findByAttribute:@"timestamp" withValue:varTIme andOrderBy:@"timestamp" ascending:NO];
+//             [tbl_history reloadData];
+        });
+    });
+
+}
+
+-(void)getTIme :(int)sectionNum : (int)time : (NSString *)Nometer : (NSString*)idPelanggan{
     NSLog(@"ini text = %@",Nometer);
     timestamp = time;
+    urutanNum = sectionNum;
     no_meter = Nometer;
     pelanggan_id = idPelanggan;
     self.txt_nometer.text= @"aasasasa";
     
     //txt_nometer.text = [NSString stringWithFormat:@"%@ / %@",Nometer,idPelanggan];
-}
-
--(void)setnometer{
-     txt_nometer.text = @"bbbbb";
-     [txt_nometer setNeedsDisplay];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
