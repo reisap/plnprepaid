@@ -135,6 +135,7 @@
                     <navigationItem key="navigationItem" id="Z3e-50-9av"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="img_random" destination="Fey-dZ-5xn" id="pVi-6B-tM0"/>
                         <outlet property="judul_meter" destination="sx4-dU-7WU" id="odT-Ip-us0"/>
                         <outlet property="tbl_history" destination="aon-Vu-0mR" id="WjL-Jx-QzY"/>
                         <outlet property="txt_nometer" destination="UlF-y9-dBX" id="cD2-rC-i9c"/>

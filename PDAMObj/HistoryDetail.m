@@ -48,11 +48,12 @@
 @property (weak, nonatomic) IBOutlet UITableView *tbl_history;
 @property (weak, nonatomic) IBOutlet UILabel *txt_nometer;
 @property (weak, nonatomic) IBOutlet UILabel *judul_meter;
+@property (weak, nonatomic) IBOutlet UIImageView *img_random;
 
 @end
 
 @implementation HistoryDetail
-@synthesize tbl_history,txt_nometer;
+@synthesize tbl_history,txt_nometer,img_random;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -77,6 +78,9 @@
     sortedNotifikasi= [Historypln MR_findByAttribute:@"timestamp" withValue:varTIme andOrderBy:@"timestamp" ascending:NO];
     NSLog(@"ini umlah data sortedNotifikasi = %@",sortedNotifikasi);
     // Do any additional setup after loading the view.
+    
+    NSArray *imageNameArray = [[NSArray alloc] initWithObjects:@"strommast-380181_640.jpg", @"twilight-532720_640.jpg",@"light-bulb-1358917_640.jpg",@"light-bulb-503881_640.jpg", nil];
+    img_random.image = [UIImage imageNamed:[imageNameArray objectAtIndex:arc4random_uniform((uint32_t)[imageNameArray count])]];
 }
 
 - (void)didReceiveMemoryWarning {

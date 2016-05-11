@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -124,6 +124,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="ySb-8m-bJ2" firstAttribute="top" secondItem="E50-b9-0lc" secondAttribute="bottom" constant="20" id="272-Fi-7M4"/>
                     <constraint firstItem="E50-b9-0lc" firstAttribute="top" secondItem="aMj-XO-Rzx" secondAttribute="bottom" constant="1" id="5jl-2i-o4a"/>
@@ -173,6 +174,7 @@
                     <constraint firstAttribute="trailing" secondItem="TpF-eo-bzl" secondAttribute="trailing" constant="9" id="x5l-9d-4c2"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="daya" destination="RRi-bL-m6h" id="E8h-9h-n6R"/>
                 <outlet property="isi_token" destination="TpF-eo-bzl" id="xL8-5h-an1"/>
@@ -181,7 +183,7 @@
                 <outlet property="rupiah" destination="ySb-8m-bJ2" id="nrR-yK-Ncx"/>
                 <outlet property="tgl_bayar" destination="EXX-c2-yCz" id="d4r-JG-cYK"/>
             </connections>
-            <point key="canvasLocation" x="231" y="411"/>
+            <point key="canvasLocation" x="39" y="425"/>
         </tableViewCell>
     </objects>
 </document>
